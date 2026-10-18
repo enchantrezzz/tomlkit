@@ -120,7 +120,6 @@ def test_p5_time_round_trip(t):
     assert tomlkit.time(t.isoformat()) == t
 
 
-@pytest.mark.xfail(strict=True, reason="DEFECT D1: date() accepts datetime strings")
 @given(DATETIMES)
 def test_p5_date_rejects_datetime_strings(d):
     # documented: "date() only accepts date strings" (defect D1)
