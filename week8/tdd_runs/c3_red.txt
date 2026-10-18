@@ -1,0 +1,4 @@
+=========================== short test summary info ============================
+FAILED tests_tdd/test_tdd_cycles.py::test_c3_comment_splits_every_line_break[a\rb-# a\n# b]
+FAILED tests_tdd/test_tdd_cycles.py::test_c3_comment_splits_every_line_break[a\r\rb-# a\n#\n# b]
+2 failed, 2 passed, 13 deselected in 0.17s
