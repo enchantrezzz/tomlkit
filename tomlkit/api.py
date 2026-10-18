@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import contextlib
 import datetime as _datetime
+import re
 
 from collections.abc import Iterable
 from collections.abc import Mapping
@@ -311,7 +312,7 @@ def comment(string: str) -> Comment:
     A multiline string produces one ``#``-prefixed line per line so that the
     result is still valid TOML.
     """
-    lines = string.split("\n")
+    lines = re.sub(r"\r(?!\n)", "\n", string).split("\n")
     rendered = "\n".join(f"# {line}" if line else "#" for line in lines)
     return Comment(Trivia(comment_ws="  ", comment=rendered))
 
