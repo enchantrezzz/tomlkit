@@ -20,3 +20,30 @@ def test_c1_date_still_accepts_plain_dates():
     d = tomlkit.date("1979-05-27")
     assert type(d.unwrap()) is dt.date
     assert d.as_string() == "1979-05-27"
+
+
+# ---- Cycle 2 (D7): multiline strings must not emit a bare CR ----
+from tomlkit.exceptions import InvalidStringError  # noqa: E402
+from tomlkit.items import String, StringType  # noqa: E402
+
+
+@pytest.mark.parametrize("value", ["a\rb", "\r", "a\r\rb", "end\r"])
+def test_c2_multiline_basic_escapes_bare_cr(value):
+    s = String.from_raw(value, StringType.MLB)
+    assert "\r" not in s.as_string().replace("\r\n", "")
+    assert tomlkit.parse(f"x = {s.as_string()}\n")["x"] == value
+
+
+def test_c2_multiline_basic_keeps_crlf_line_breaks():
+    s = String.from_raw("a\r\nb", StringType.MLB)
+    assert s.as_string() == '"""a\r\nb"""'
+
+
+@pytest.mark.parametrize("value", ["a\rb", "\r"])
+def test_c2_multiline_literal_rejects_bare_cr(value):
+    with pytest.raises(InvalidStringError):
+        String.from_raw(value, StringType.MLL)
+
+
+def test_c2_multiline_literal_allows_crlf():
+    assert String.from_raw("a\r\nb", StringType.MLL).as_string() == "'''a\r\nb'''"
