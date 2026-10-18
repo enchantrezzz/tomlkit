@@ -32,3 +32,6 @@ MANIFEST.in
 /tests/fixtures/simple_project/setup.py
 .mypy_cache
 benchmark.py
+
+# mutmut working directory
+mutants/
