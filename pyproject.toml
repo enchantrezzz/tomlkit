@@ -66,3 +66,11 @@ enable_error_code = [
 [build-system]
 requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.mutmut]
+# COMP 441 Week 7: mutation testing of the AI-only baseline suite (v1)
+paths_to_mutate = ["tomlkit/"]
+tests_dir = ["tests_ai/"]
+also_copy = ["tests_ai/"]
+do_not_mutate = ["tomlkit/_compat.py", "tomlkit/_types.py"]
+pytest_add_cli_args = ["-p", "no:cacheprovider"]
