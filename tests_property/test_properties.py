@@ -12,11 +12,18 @@ import datetime as dt
 import string as _string
 
 import pytest
-from hypothesis import HealthCheck, assume, given, settings, strategies as st
+
+from hypothesis import HealthCheck
+from hypothesis import given
+from hypothesis import settings
+from hypothesis import strategies as st
 
 import tomlkit
+
 from tomlkit.exceptions import InvalidStringError
-from tomlkit.items import StringType, String
+from tomlkit.items import String
+from tomlkit.items import StringType
+
 
 settings.register_profile(
     "ci", max_examples=200, deadline=None, suppress_health_check=[HealthCheck.too_slow]
@@ -83,8 +90,6 @@ def test_p2_parse_dumps_is_identity_on_text(data):
 # ---------- P3: string() round-trips, or rejects with InvalidStringError ----------
 @given(TEXT, st.sampled_from(list(StringType)))
 def test_p3_string_round_trip_all_kinds(s, kind):
-    # A bare CR in a multiline string is defect D7, pinned separately below.
-    assume(not (kind.is_multiline() and "\r" in s))
     try:
         item = String.from_raw(s, kind)
     except InvalidStringError:
@@ -131,8 +136,7 @@ def test_p5_date_rejects_datetime_strings(d):
     assert not isinstance(r, dt.datetime)
 
 
-# ---------- Defect found by Hypothesis (P3), pinned deterministically ----------
-@pytest.mark.xfail(strict=True, reason="DEFECT D7: multiline strings accept a bare CR and emit unparseable TOML")
+# ---------- Regression for D7 (found by Hypothesis P3, fixed in TDD cycle 2) ----------
 @pytest.mark.parametrize("kind", [StringType.MLB, StringType.MLL])
 def test_d7_multiline_string_with_bare_cr(kind):
     try:
