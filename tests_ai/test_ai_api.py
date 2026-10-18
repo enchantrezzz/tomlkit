@@ -221,7 +221,6 @@ class TestDateTimeFactories:
         assert isinstance(d, Date)
         assert d == dt.date(1979, 5, 27)
 
-    @pytest.mark.xfail(strict=True, reason="DEFECT D1: date() accepts datetime strings (datetime is a date subclass)")
     def test_date_rejects_datetime(self):
         with pytest.raises(ValueError):
             tomlkit.date("1979-05-27T07:32:00")
