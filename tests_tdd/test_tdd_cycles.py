@@ -47,3 +47,17 @@ def test_c2_multiline_literal_rejects_bare_cr(value):
 
 def test_c2_multiline_literal_allows_crlf():
     assert String.from_raw("a\r\nb", StringType.MLL).as_string() == "'''a\r\nb'''"
+
+
+# ---- Cycle 3 (D6): comment() must always produce valid TOML ----
+@pytest.mark.parametrize(
+    "text,expected",
+    [("a\rb", "# a\n# b"), ("a\r\rb", "# a\n#\n# b"), ("a\r\nb", "# a\r\n# b"), ("a\nb", "# a\n# b")],
+)
+def test_c3_comment_splits_every_line_break(text, expected):
+    doc = tomlkit.document()
+    doc.add(tomlkit.comment(text))
+    doc.add("k", 1)
+    out = doc.as_string()
+    assert out.startswith(expected)
+    assert tomlkit.parse(out)["k"] == 1
