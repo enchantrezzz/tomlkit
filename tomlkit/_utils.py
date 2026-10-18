@@ -102,6 +102,10 @@ def parse_rfc3339(string: str) -> datetime | date | time:
     raise ValueError("Invalid RFC 3339 string")
 
 
+# A carriage return that is not part of a CRLF line break. TOML allows CRLF
+# line breaks but never a lone CR, so callers must escape, split or reject it.
+BARE_CR = re.compile(r"\r(?!\n)")
+
 # https://toml.io/en/v1.0.0#string
 CONTROL_CHARS = frozenset(chr(c) for c in range(0x20)) | {chr(0x7F)}
 _escaped = {
