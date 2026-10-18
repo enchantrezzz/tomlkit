@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import contextlib
 import datetime as _datetime
-import re
 
 from collections.abc import Iterable
 from collections.abc import Mapping
@@ -11,6 +10,7 @@ from typing import TYPE_CHECKING
 from typing import Any
 from typing import TypeVar
 
+from tomlkit._utils import BARE_CR
 from tomlkit._utils import parse_rfc3339
 from tomlkit.container import Container
 from tomlkit.exceptions import UnexpectedCharError
@@ -312,7 +312,7 @@ def comment(string: str) -> Comment:
     A multiline string produces one ``#``-prefixed line per line so that the
     result is still valid TOML.
     """
-    lines = re.sub(r"\r(?!\n)", "\n", string).split("\n")
+    lines = BARE_CR.sub("\n", string).split("\n")
     rendered = "\n".join(f"# {line}" if line else "#" for line in lines)
     return Comment(Trivia(comment_ws="  ", comment=rendered))
 

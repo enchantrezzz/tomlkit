@@ -28,6 +28,7 @@ from tomlkit._types import _CustomDict
 from tomlkit._types import _CustomFloat
 from tomlkit._types import _CustomInt
 from tomlkit._types import _CustomList
+from tomlkit._utils import BARE_CR
 from tomlkit._utils import CONTROL_CHARS
 from tomlkit._utils import escape_string
 from tomlkit.exceptions import ConvertError
@@ -230,11 +231,6 @@ def item(value: Any, _parent: Item | None = None, _sort_keys: bool = False) -> I
                 return rv
 
     raise ConvertError(f"Unable to convert an object of {type(value)} to a TOML item")
-
-
-# A carriage return that is not part of a CRLF line break. TOML allows CRLF
-# in multiline strings but never a lone CR, which must be escaped or rejected.
-_BARE_CR = re.compile(r"\r(?!\n)")
 
 
 class StringType(Enum):
@@ -2247,13 +2243,13 @@ class String(str, Item):
         invalid = type_.invalid_sequences
         if any(c in value for c in invalid):
             raise InvalidStringError(value, invalid, type_.value)
-        if type_ is StringType.MLL and _BARE_CR.search(value):
+        if type_ is StringType.MLL and BARE_CR.search(value):
             raise InvalidStringError(value, ["\r"], type_.value)
 
         escaped = type_.escaped_sequences
         string_value = escape_string(value, escaped) if escape and escaped else value
         if type_ is StringType.MLB and escape:
-            string_value = _BARE_CR.sub(r"\\r", string_value)
+            string_value = BARE_CR.sub(r"\\r", string_value)
 
         if type_.is_multiline() and string_value[:1] in ("\n", "\r"):
             # A newline immediately following the opening delimiter of a
