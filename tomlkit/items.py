@@ -2242,9 +2242,13 @@ class String(str, Item):
         invalid = type_.invalid_sequences
         if any(c in value for c in invalid):
             raise InvalidStringError(value, invalid, type_.value)
+        if type_ is StringType.MLL and re.search(r"\r(?!\n)", value):
+            raise InvalidStringError(value, ["\r"], type_.value)
 
         escaped = type_.escaped_sequences
         string_value = escape_string(value, escaped) if escape and escaped else value
+        if type_ is StringType.MLB and escape:
+            string_value = re.sub(r"\r(?!\n)", r"\\r", string_value)
 
         if type_.is_multiline() and string_value[:1] in ("\n", "\r"):
             # A newline immediately following the opening delimiter of a
