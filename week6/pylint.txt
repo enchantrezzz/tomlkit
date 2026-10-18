@@ -1,0 +1,234 @@
+************* Module tomlkit.container
+tomlkit/container.py:1: [C0302(too-many-lines), ] Too many lines in module (1287/1000)
+tomlkit/container.py:139: [W0212(protected-access), Container._handle_dotted_key] Access to a protected member _dotted of a client class
+tomlkit/container.py:142: [W0212(protected-access), Container._handle_dotted_key] Access to a protected member _dotted of a client class
+tomlkit/container.py:135: [R1711(useless-return), Container._handle_dotted_key] Useless return at end of function or method
+tomlkit/container.py:225: [R0914(too-many-locals), Container.append] Too many local variables (19/15)
+tomlkit/container.py:274: [R1705(no-else-return), Container.append] Unnecessary "elif" after "return", replace only that "elif" with "if"
+tomlkit/container.py:261: [R1702(too-many-nested-blocks), Container.append] Too many nested blocks (6/5)
+tomlkit/container.py:304: [R1705(no-else-return), Container.append] Unnecessary "elif" after "return", replace only that "elif" with "if"
+tomlkit/container.py:261: [R1702(too-many-nested-blocks), Container.append] Too many nested blocks (6/5)
+tomlkit/container.py:389: [R1705(no-else-return), Container.append] Unnecessary "else" after "return", remove the "else" and de-indent the code inside it
+tomlkit/container.py:400: [W0212(protected-access), Container.append] Access to a protected member _previous_item of a client class
+tomlkit/container.py:225: [R0911(too-many-return-statements), Container.append] Too many return statements (9/6)
+tomlkit/container.py:225: [R0912(too-many-branches), Container.append] Too many branches (46/12)
+tomlkit/container.py:225: [R0915(too-many-statements), Container.append] Too many statements (92/50)
+tomlkit/container.py:425: [W0212(protected-access), Container._validate_table_candidate] Access to a protected member _map of a client class
+tomlkit/container.py:445: [W0212(protected-access), Container._validate_table_candidate] Access to a protected member _map of a client class
+tomlkit/container.py:451: [W0212(protected-access), Container._validate_table_candidate] Access to a protected member _map of a client class
+tomlkit/container.py:661: [R0912(too-many-branches), Container._render_table] Too many branches (16/12)
+tomlkit/container.py:871: [R0914(too-many-locals), Container._replace_at] Too many local variables (16/15)
+tomlkit/container.py:871: [R0912(too-many-branches), Container._replace_at] Too many branches (17/12)
+tomlkit/container.py:871: [R0915(too-many-statements), Container._replace_at] Too many statements (53/50)
+tomlkit/container.py:994: [W0613(unused-argument), Container._getstate] Unused argument 'protocol'
+tomlkit/container.py:1077: [W0212(protected-access), OutOfOrderTableProxy.validate] Access to a protected member _body of a client class
+tomlkit/container.py:1083: [W0212(protected-access), OutOfOrderTableProxy.validate] Access to a protected member _validate_out_of_order_table of a client class
+tomlkit/container.py:1126: [W0212(protected-access), OutOfOrderTableProxy._merge_aot_fragment] Access to a protected member _map of a client class
+tomlkit/container.py:1128: [W0212(protected-access), OutOfOrderTableProxy._merge_aot_fragment] Access to a protected member _map of a client class
+tomlkit/container.py:1136: [W0212(protected-access), OutOfOrderTableProxy._merge_aot_fragment] Access to a protected member _body of a client class
+tomlkit/container.py:1141: [W0212(protected-access), OutOfOrderTableProxy._merge_aot_fragment] Access to a protected member _body of a client class
+tomlkit/container.py:1141: [W0212(protected-access), OutOfOrderTableProxy._merge_aot_fragment] Access to a protected member _body of a client class
+tomlkit/container.py:1174: [C0415(import-outside-toplevel), OutOfOrderTableProxy.__setitem__] Import outside toplevel (items.item)
+tomlkit/container.py:1173: [R0912(too-many-branches), OutOfOrderTableProxy.__setitem__] Too many branches (14/12)
+tomlkit/container.py:1227: [W0212(protected-access), OutOfOrderTableProxy._remove_table] Access to a protected member _body of a client class
+tomlkit/container.py:1229: [W0212(protected-access), OutOfOrderTableProxy._remove_table] Access to a protected member _remove_at of a client class
+tomlkit/container.py:1267: [W0212(protected-access), ends_with_whitespace] Access to a protected member _previous_item of a client class
+************* Module tomlkit.parser
+tomlkit/parser.py:1: [C0302(too-many-lines), ] Too many lines in module (1297/1000)
+tomlkit/parser.py:103: [W0621(redefined-outer-name), Parser.__init__] Redefining name 'string' from outer scope (line 5)
+tomlkit/parser.py:146: [W0622(redefined-builtin), Parser.consume] Redefining built-in 'min'
+tomlkit/parser.py:146: [W0622(redefined-builtin), Parser.consume] Redefining built-in 'max'
+tomlkit/parser.py:164: [W1113(keyword-arg-before-vararg), Parser.parse_error] Keyword argument before variable positional arguments list in the definition of parse_error function
+tomlkit/parser.py:259: [R1705(no-else-return), Parser._parse_item] Unnecessary "elif" after "return", replace only that "elif" with "if"
+tomlkit/parser.py:308: [R1723(no-else-break), Parser._parse_comment_trail] Unnecessary "elif" after "break", replace only that "elif" with "if"
+tomlkit/parser.py:292: [R0912(too-many-branches), Parser._parse_comment_trail] Too many branches (17/12)
+tomlkit/parser.py:377: [R1720(no-else-raise), Parser._parse_key_value] Unnecessary "else" after "raise", remove the "else" and de-indent the code inside it
+tomlkit/parser.py:433: [R1705(no-else-return), Parser._parse_simple_key] Unnecessary "else" after "return", remove the "else" and de-indent the code inside it
+tomlkit/parser.py:453: [W0212(protected-access), Parser._parse_quoted_key] Access to a protected member _t of a client class
+tomlkit/parser.py:454: [W0212(protected-access), Parser._parse_quoted_key] Access to a protected member _t of a client class
+tomlkit/parser.py:488: [R1705(no-else-return), Parser._parse_value] Unnecessary "elif" after "return", replace only that "elif" with "if"
+tomlkit/parser.py:480: [R0911(too-many-return-statements), Parser._parse_value] Too many return statements (12/6)
+tomlkit/parser.py:480: [R0912(too-many-branches), Parser._parse_value] Too many branches (19/12)
+tomlkit/parser.py:480: [R0915(too-many-statements), Parser._parse_value] Too many statements (53/50)
+tomlkit/parser.py:677: [W0212(protected-access), Parser._parse_array] Access to a protected member _s of a client class
+tomlkit/parser.py:744: [R0911(too-many-return-statements), Parser._parse_number] Too many return statements (8/6)
+tomlkit/parser.py:920: [R0916(too-many-boolean-expressions), Parser._parse_string] Too many boolean expressions in if statement (10/5)
+tomlkit/parser.py:920: [R1720(no-else-raise), Parser._parse_string] Unnecessary "elif" after "raise", replace only that "elif" with "if"
+tomlkit/parser.py:946: [R1705(no-else-return), Parser._parse_string] Unnecessary "else" after "return", remove the "else" and de-indent the code inside it
+tomlkit/parser.py:999: [W0212(protected-access), Parser._parse_string] Access to a protected member _idx of a client class
+tomlkit/parser.py:1004: [W0212(protected-access), Parser._parse_string] Access to a protected member _idx of a client class
+tomlkit/parser.py:867: [R0912(too-many-branches), Parser._parse_string] Too many branches (25/12)
+tomlkit/parser.py:867: [R0915(too-many-statements), Parser._parse_string] Too many statements (64/50)
+tomlkit/parser.py:1006: [R0914(too-many-locals), Parser._parse_table] Too many local variables (24/15)
+tomlkit/parser.py:1033: [R1720(no-else-raise), Parser._parse_table] Unnecessary "elif" after "raise", replace only that "elif" with "if"
+tomlkit/parser.py:1061: [R1720(no-else-raise), Parser._parse_table] Unnecessary "elif" after "raise", replace only that "elif" with "if"
+tomlkit/parser.py:1131: [R1723(no-else-break), Parser._parse_table] Unnecessary "else" after "break", remove the "else" and de-indent the code inside it
+tomlkit/parser.py:1156: [W0212(protected-access), Parser._parse_table] Access to a protected member _validate_out_of_order_table of a client class
+tomlkit/parser.py:1124: [R1702(too-many-nested-blocks), Parser._parse_table] Too many nested blocks (6/5)
+tomlkit/parser.py:1006: [R0912(too-many-branches), Parser._parse_table] Too many branches (30/12)
+tomlkit/parser.py:1006: [R0915(too-many-statements), Parser._parse_table] Too many statements (81/50)
+tomlkit/parser.py:1007: [W0613(unused-argument), Parser._parse_table] Unused argument 'parent'
+************* Module tomlkit._types
+tomlkit/_types.py:41: [R0903(too-few-public-methods), WrapperType] Too few public methods (0/2)
+tomlkit/_types.py:50: [W0223(abstract-method), _CustomList] Method '__delitem__' is abstract in class 'MutableSequence' but is not overridden in child class '_CustomList'
+tomlkit/_types.py:50: [W0223(abstract-method), _CustomList] Method '__getitem__' is abstract in class 'Sequence' but is not overridden in child class '_CustomList'
+tomlkit/_types.py:50: [W0223(abstract-method), _CustomList] Method '__len__' is abstract in class 'Sized' but is not overridden in child class '_CustomList'
+tomlkit/_types.py:50: [W0223(abstract-method), _CustomList] Method '__setitem__' is abstract in class 'MutableSequence' but is not overridden in child class '_CustomList'
+tomlkit/_types.py:50: [W0223(abstract-method), _CustomList] Method 'insert' is abstract in class 'MutableSequence' but is not overridden in child class '_CustomList'
+tomlkit/_types.py:62: [W0223(abstract-method), _CustomDict] Method '__delitem__' is abstract in class 'MutableMapping' but is not overridden in child class '_CustomDict'
+tomlkit/_types.py:62: [W0223(abstract-method), _CustomDict] Method '__getitem__' is abstract in class 'Mapping' but is not overridden in child class '_CustomDict'
+tomlkit/_types.py:62: [W0223(abstract-method), _CustomDict] Method '__iter__' is abstract in class 'Iterable' but is not overridden in child class '_CustomDict'
+tomlkit/_types.py:62: [W0223(abstract-method), _CustomDict] Method '__len__' is abstract in class 'Sized' but is not overridden in child class '_CustomDict'
+tomlkit/_types.py:62: [W0223(abstract-method), _CustomDict] Method '__setitem__' is abstract in class 'MutableMapping' but is not overridden in child class '_CustomDict'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__abs__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__add__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__and__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__ceil__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__eq__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__floor__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__floordiv__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__int__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__invert__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__le__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__lshift__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__lt__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__mod__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__mul__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__neg__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__or__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__pos__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__pow__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__radd__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rand__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rfloordiv__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rlshift__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rmod__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rmul__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__ror__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__round__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rpow__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rrshift__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rshift__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rtruediv__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__rxor__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__truediv__' is abstract in class 'Complex' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__trunc__' is abstract in class 'Real' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:74: [W0223(abstract-method), _CustomInt] Method '__xor__' is abstract in class 'Integral' but is not overridden in child class '_CustomInt'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__abs__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__add__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__ceil__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__eq__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__float__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__floor__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__floordiv__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__le__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__lt__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__mod__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__mul__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__neg__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__pos__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__pow__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__radd__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__rfloordiv__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__rmod__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__rmul__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__round__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__rpow__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__rtruediv__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__truediv__' is abstract in class 'Complex' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:77: [W0223(abstract-method), _CustomFloat] Method '__trunc__' is abstract in class 'Real' but is not overridden in child class '_CustomFloat'
+tomlkit/_types.py:88: [W0212(protected-access), wrap_method.wrapper] Access to a protected member _new of a client class
+************* Module tomlkit.source
+tomlkit/source.py:25: [W0201(attribute-defined-outside-init), _State.__enter__] Attribute '_idx' defined outside __init__
+tomlkit/source.py:26: [W0201(attribute-defined-outside-init), _State.__enter__] Attribute '_current' defined outside __init__
+tomlkit/source.py:27: [W0201(attribute-defined-outside-init), _State.__enter__] Attribute '_marker' defined outside __init__
+tomlkit/source.py:193: [W0622(redefined-builtin), Source.consume] Redefining built-in 'min'
+tomlkit/source.py:193: [W0622(redefined-builtin), Source.consume] Redefining built-in 'max'
+tomlkit/source.py:219: [W1113(keyword-arg-before-vararg), Source.parse_error] Keyword argument before variable positional arguments list in the definition of parse_error function
+************* Module tomlkit.api
+tomlkit/api.py:36: [C0414(useless-import-alias), ] Import alias does not rename original package
+tomlkit/api.py:38: [C0414(useless-import-alias), ] Import alias does not rename original package
+tomlkit/api.py:47: [W0621(redefined-outer-name), loads] Redefining name 'string' from outer scope (line 132)
+tomlkit/api.py:102: [W0621(redefined-outer-name), parse] Redefining name 'string' from outer scope (line 132)
+tomlkit/api.py:158: [W0621(redefined-outer-name), date] Redefining name 'value' from outer scope (line 271)
+tomlkit/api.py:167: [W0621(redefined-outer-name), time] Redefining name 'value' from outer scope (line 271)
+tomlkit/api.py:176: [W0621(redefined-outer-name), datetime] Redefining name 'value' from outer scope (line 271)
+tomlkit/api.py:284: [W0212(protected-access), value] Access to a protected member _parse_value of a client class
+tomlkit/api.py:286: [W0212(protected-access), value] Access to a protected member _current of a client class
+tomlkit/api.py:298: [W0212(protected-access), key_value] Access to a protected member _parse_key_value of a client class
+tomlkit/api.py:311: [W0621(redefined-outer-name), comment] Redefining name 'string' from outer scope (line 132)
+************* Module tomlkit.exceptions
+tomlkit/exceptions.py:204: [W0622(redefined-builtin), InvalidControlChar.__init__] Redefining built-in 'type'
+************* Module tomlkit._utils
+tomlkit/_utils.py:22: [C0301(line-too-long), ] Line too long (104/100)
+tomlkit/_utils.py:62: [R1705(no-else-return), parse_rfc3339] Unnecessary "else" after "return", remove the "else" and de-indent the code inside it
+************* Module tomlkit.items
+tomlkit/items.py:1: [C0302(too-many-lines), ] Too many lines in module (2389/1000)
+tomlkit/items.py:43: [R0903(too-few-public-methods), Encoder] Too few public methods (1/2)
+tomlkit/items.py:128: [C0415(import-outside-toplevel), item] Import outside toplevel (tomlkit.container.Container)
+tomlkit/items.py:133: [R1705(no-else-return), item] Unnecessary "elif" after "return", replace only that "elif" with "if"
+tomlkit/items.py:114: [R0911(too-many-return-statements), item] Too many return statements (11/6)
+tomlkit/items.py:114: [R0912(too-many-branches), item] Too many branches (24/12)
+tomlkit/items.py:344: [C0103(invalid-name), KeyType] Class constant name "Bare" doesn't conform to UPPER_CASE naming style
+tomlkit/items.py:345: [C0103(invalid-name), KeyType] Class constant name "Basic" doesn't conform to UPPER_CASE naming style
+tomlkit/items.py:346: [C0103(invalid-name), KeyType] Class constant name "Literal" doesn't conform to UPPER_CASE naming style
+tomlkit/items.py:375: [W0212(protected-access), Key.concat] Access to a protected member _keys of a client class
+tomlkit/items.py:534: [W0613(unused-argument), Item._getstate] Unused argument 'protocol'
+tomlkit/items.py:544: [W0223(abstract-method), Whitespace] Method 'unwrap' is abstract in class 'Item' but is not overridden in child class 'Whitespace'
+tomlkit/items.py:549: [W0231(super-init-not-called), Whitespace.__init__] __init__ method from base class 'Item' is not called
+tomlkit/items.py:584: [W0223(abstract-method), Comment] Method 'unwrap' is abstract in class 'Item' but is not overridden in child class 'Comment'
+tomlkit/items.py:602: [R0901(too-many-ancestors), Integer] Too many ancestors (8/7)
+tomlkit/items.py:1031: [W0222(signature-differs), DateTime.__new__] Signature differs from overridden '__new__' method
+tomlkit/items.py:1031: [R0913(too-many-arguments), DateTime.__new__] Too many arguments (10/5)
+tomlkit/items.py:1031: [R0917(too-many-positional-arguments), DateTime.__new__] Too many positional arguments (10/5)
+tomlkit/items.py:1040: [W0621(redefined-outer-name), DateTime.__new__] Redefining name 'tzinfo' from outer scope (line 18)
+tomlkit/items.py:1057: [R0913(too-many-arguments), DateTime.__init__] Too many arguments (10/5)
+tomlkit/items.py:1057: [R0917(too-many-positional-arguments), DateTime.__init__] Too many positional arguments (10/5)
+tomlkit/items.py:1066: [W0621(redefined-outer-name), DateTime.__init__] Redefining name 'tzinfo' from outer scope (line 18)
+tomlkit/items.py:1059: [W0613(unused-argument), DateTime.__init__] Unused argument 'year'
+tomlkit/items.py:1060: [W0613(unused-argument), DateTime.__init__] Unused argument 'month'
+tomlkit/items.py:1061: [W0613(unused-argument), DateTime.__init__] Unused argument 'day'
+tomlkit/items.py:1062: [W0613(unused-argument), DateTime.__init__] Unused argument 'hour'
+tomlkit/items.py:1063: [W0613(unused-argument), DateTime.__init__] Unused argument 'minute'
+tomlkit/items.py:1064: [W0613(unused-argument), DateTime.__init__] Unused argument 'second'
+tomlkit/items.py:1065: [W0613(unused-argument), DateTime.__init__] Unused argument 'microsecond'
+tomlkit/items.py:1066: [W0613(unused-argument), DateTime.__init__] Unused argument 'tzinfo'
+tomlkit/items.py:1058: [W0613(unused-argument), DateTime.__init__] Unused argument 'kwargs'
+tomlkit/items.py:1084: [W0621(redefined-outer-name), DateTime.unwrap] Redefining name 'tzinfo' from outer scope (line 18)
+tomlkit/items.py:1147: [W0222(signature-differs), DateTime.astimezone] Signature differs from overridden 'astimezone' method
+tomlkit/items.py:1203: [W0613(unused-argument), Date.__init__] Unused argument 'year'
+tomlkit/items.py:1204: [W0613(unused-argument), Date.__init__] Unused argument 'month'
+tomlkit/items.py:1205: [W0613(unused-argument), Date.__init__] Unused argument 'day'
+tomlkit/items.py:1270: [W0222(signature-differs), Time.__new__] Signature differs from overridden '__new__' method
+tomlkit/items.py:1270: [R0913(too-many-arguments), Time.__new__] Too many arguments (7/5)
+tomlkit/items.py:1270: [R0917(too-many-positional-arguments), Time.__new__] Too many positional arguments (7/5)
+tomlkit/items.py:1276: [W0621(redefined-outer-name), Time.__new__] Redefining name 'tzinfo' from outer scope (line 18)
+tomlkit/items.py:1282: [R0913(too-many-arguments), Time.__init__] Too many arguments (7/5)
+tomlkit/items.py:1282: [R0917(too-many-positional-arguments), Time.__init__] Too many positional arguments (7/5)
+tomlkit/items.py:1288: [W0621(redefined-outer-name), Time.__init__] Redefining name 'tzinfo' from outer scope (line 18)
+tomlkit/items.py:1284: [W0613(unused-argument), Time.__init__] Unused argument 'hour'
+tomlkit/items.py:1285: [W0613(unused-argument), Time.__init__] Unused argument 'minute'
+tomlkit/items.py:1286: [W0613(unused-argument), Time.__init__] Unused argument 'second'
+tomlkit/items.py:1287: [W0613(unused-argument), Time.__init__] Unused argument 'microsecond'
+tomlkit/items.py:1288: [W0613(unused-argument), Time.__init__] Unused argument 'tzinfo'
+tomlkit/items.py:1297: [W0621(redefined-outer-name), Time.unwrap] Redefining name 'tzinfo' from outer scope (line 18)
+tomlkit/items.py:1400: [W0621(redefined-outer-name), Array._group_values] Redefining name 'item' from outer scope (line 53)
+tomlkit/items.py:1493: [R0912(too-many-branches), Array.add_line] Too many branches (17/12)
+tomlkit/items.py:1595: [W0237(arguments-renamed), Array.insert] Parameter 'index' has been renamed to 'pos' in overriding 'Array.insert' method
+tomlkit/items.py:1602: [R1731(consider-using-max-builtin), Array.insert] Consider using 'pos = max(pos, 0)' instead of unnecessary if block
+tomlkit/items.py:1595: [R0912(too-many-branches), Array.insert] Too many branches (15/12)
+tomlkit/items.py:1655: [R0912(too-many-branches), Array.__delitem__] Too many branches (19/12)
+tomlkit/items.py:1732: [W0223(abstract-method), AbstractTable] Method 'as_string' is abstract in class 'Item' but is not overridden in child class 'AbstractTable'
+tomlkit/items.py:1732: [W0223(abstract-method), AbstractTable] Method 'discriminant' is abstract in class 'Item' but is not overridden in child class 'AbstractTable'
+tomlkit/items.py:1799: [W0222(signature-differs), AbstractTable.setdefault] Signature differs from overridden 'setdefault' method
+tomlkit/items.py:1864: [R0913(too-many-arguments), Table.__init__] Too many arguments (6/5)
+tomlkit/items.py:1864: [R0917(too-many-positional-arguments), Table.__init__] Too many positional arguments (6/5)
+tomlkit/items.py:1956: [W0212(protected-access), Table.is_super_table] Access to a protected member _map of a client class
+tomlkit/items.py:1983: [W0621(redefined-outer-name), Table.indent] Redefining name 'item' from outer scope (line 53)
+tomlkit/items.py:2055: [R0914(too-many-locals), InlineTable.as_string] Too many local variables (20/15)
+tomlkit/items.py:2055: [R0912(too-many-branches), InlineTable.as_string] Too many branches (20/12)
+tomlkit/items.py:2055: [R0915(too-many-statements), InlineTable.as_string] Too many statements (59/50)
+
+-----------------------------------
+Your code has been rated at 9.33/10
+
