@@ -28,6 +28,7 @@ from tomlkit._types import _CustomDict
 from tomlkit._types import _CustomFloat
 from tomlkit._types import _CustomInt
 from tomlkit._types import _CustomList
+from tomlkit._utils import BARE_CR
 from tomlkit._utils import CONTROL_CHARS
 from tomlkit._utils import escape_string
 from tomlkit.exceptions import ConvertError
@@ -2242,9 +2243,13 @@ class String(str, Item):
         invalid = type_.invalid_sequences
         if any(c in value for c in invalid):
             raise InvalidStringError(value, invalid, type_.value)
+        if type_ is StringType.MLL and BARE_CR.search(value):
+            raise InvalidStringError(value, ["\r"], type_.value)
 
         escaped = type_.escaped_sequences
         string_value = escape_string(value, escaped) if escape and escaped else value
+        if type_ is StringType.MLB and escape:
+            string_value = BARE_CR.sub(r"\\r", string_value)
 
         if type_.is_multiline() and string_value[:1] in ("\n", "\r"):
             # A newline immediately following the opening delimiter of a

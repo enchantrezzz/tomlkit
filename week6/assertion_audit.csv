@@ -1,0 +1,306 @@
+file,test,asserts,raises,verdict,notes
+test_ai_api.py,TestParseAndLoads::test_parse_returns_document,1,0,WEAK,"type-only: isinstance(doc, TOMLDocument)"
+test_ai_api.py,TestParseAndLoads::test_parse_values,4,0,STRONG,
+test_ai_api.py,TestParseAndLoads::test_loads_is_alias_of_parse,1,0,STRONG,
+test_ai_api.py,TestParseAndLoads::test_parse_accepts_bytes,1,0,STRONG,
+test_ai_api.py,TestParseAndLoads::test_parse_empty_string,2,0,STRONG,
+test_ai_api.py,TestParseAndLoads::test_parse_invalid_raises,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_api.py,TestRoundTrip::test_round_trip_identical,1,0,STRONG,
+test_ai_api.py,TestRoundTrip::test_round_trip_preserves_formatting,1,0,STRONG,
+test_ai_api.py,TestDumps::test_dumps_plain_dict,1,0,STRONG,
+test_ai_api.py,TestDumps::test_dumps_nested_dict_creates_table,1,0,STRONG,
+test_ai_api.py,TestDumps::test_dumps_sort_keys,1,0,STRONG,
+test_ai_api.py,TestDumps::test_dumps_sort_keys_on_document,1,0,STRONG,
+test_ai_api.py,TestDumps::test_dumps_rejects_non_mapping,0,1,WEAK,broad exception: raises(TypeError) without match
+test_ai_api.py,TestDumps::test_dumps_table_item,1,0,STRONG,
+test_ai_api.py,TestFileLikeIO::test_load_from_text_stream,1,0,STRONG,
+test_ai_api.py,TestFileLikeIO::test_load_from_bytes_stream,1,0,STRONG,
+test_ai_api.py,TestFileLikeIO::test_dump_to_stream,1,0,STRONG,
+test_ai_api.py,TestFileLikeIO::test_dump_sort_keys,1,0,STRONG,
+test_ai_api.py,TestDocument::test_document_empty,2,0,PARTIAL,"type-only: isinstance(doc, TOMLDocument)"
+test_ai_api.py,TestDocument::test_document_build,1,0,STRONG,
+test_ai_api.py,TestScalarFactories::test_integer,2,0,PARTIAL,"type-only: isinstance(i, Integer)"
+test_ai_api.py,TestScalarFactories::test_integer_invalid,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestScalarFactories::test_float,2,0,PARTIAL,"type-only: isinstance(f, Float)"
+test_ai_api.py,TestScalarFactories::test_float_invalid,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestScalarFactories::test_boolean,2,0,PARTIAL,"type-only: isinstance(b, Bool)"
+test_ai_api.py,TestScalarFactories::test_boolean_other_string_is_false,1,0,STRONG,
+test_ai_api.py,TestStringFactory::test_basic_default,3,0,PARTIAL,"type-only: isinstance(s, String)"
+test_ai_api.py,TestStringFactory::test_literal,1,0,STRONG,
+test_ai_api.py,TestStringFactory::test_multiline_basic,1,0,STRONG,
+test_ai_api.py,TestStringFactory::test_multiline_literal,1,0,STRONG,
+test_ai_api.py,TestStringFactory::test_basic_escapes,1,0,STRONG,
+test_ai_api.py,TestStringFactory::test_no_escape,1,0,STRONG,
+test_ai_api.py,TestStringFactory::test_literal_cannot_contain_quote,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestDateTimeFactories::test_date,2,0,PARTIAL,"type-only: isinstance(d, Date)"
+test_ai_api.py,TestDateTimeFactories::test_date_rejects_datetime,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestDateTimeFactories::test_time,2,0,PARTIAL,"type-only: isinstance(t, Time)"
+test_ai_api.py,TestDateTimeFactories::test_time_rejects_date,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestDateTimeFactories::test_datetime_with_offset,2,0,PARTIAL,"type-only: isinstance(d, DateTime)"
+test_ai_api.py,TestDateTimeFactories::test_datetime_rejects_time,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestDateTimeFactories::test_invalid_string,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestContainerFactories::test_array_default_empty,2,0,PARTIAL,"type-only: isinstance(a, Array)"
+test_ai_api.py,TestContainerFactories::test_array_from_string,1,0,STRONG,
+test_ai_api.py,TestContainerFactories::test_array_rejects_non_array,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_api.py,TestContainerFactories::test_table,2,0,PARTIAL,"type-only: isinstance(t, Table)"
+test_ai_api.py,TestContainerFactories::test_super_table_renders_dotted_header,1,0,STRONG,
+test_ai_api.py,TestContainerFactories::test_inline_table,2,0,PARTIAL,"type-only: isinstance(t, InlineTable)"
+test_ai_api.py,TestContainerFactories::test_aot,2,0,PARTIAL,"type-only: isinstance(a, AoT)"
+test_ai_api.py,TestKeyFactory::test_single_key,2,0,PARTIAL,"type-only: isinstance(k, SingleKey)"
+test_ai_api.py,TestKeyFactory::test_dotted_key,2,0,PARTIAL,"type-only: isinstance(k, DottedKey)"
+test_ai_api.py,TestKeyFactory::test_list_of_one_is_single_key,1,0,WEAK,"type-only: isinstance(tomlkit.key(['only']), SingleKey)"
+test_ai_api.py,TestKeyFactory::test_key_needing_quotes,1,0,STRONG,
+test_ai_api.py,TestKeyFactory::test_keys_in_document,1,0,STRONG,
+test_ai_api.py,TestValueAndKeyValue::test_value,1,0,STRONG,
+test_ai_api.py,TestValueAndKeyValue::test_value_trailing_garbage,0,1,STRONG,
+test_ai_api.py,TestValueAndKeyValue::test_key_value,2,0,STRONG,
+test_ai_api.py,TestValueAndKeyValue::test_key_value_invalid,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_api.py,TestTriviaFactories::test_ws,3,0,PARTIAL,"type-only: isinstance(w, Whitespace)"
+test_ai_api.py,TestTriviaFactories::test_nl,1,0,STRONG,
+test_ai_api.py,TestTriviaFactories::test_comment,2,0,PARTIAL,"type-only: isinstance(c, Comment)"
+test_ai_api.py,TestTriviaFactories::test_multiline_comment,2,0,WEAK,substring: '# one\n' in out; substring: '# two' in out
+test_ai_api.py,TestEncoders::test_unsupported_type_raises,0,1,STRONG,
+test_ai_api.py,TestEncoders::test_register_and_unregister,2,1,STRONG,
+test_ai_api.py,TestEncoders::test_encoder_with_kwargs,1,0,STRONG,
+test_ai_api.py,TestEncoders::test_encoder_must_return_item,0,1,STRONG,
+test_ai_api.py,TestEncoders::test_unregister_unknown_is_noop,0,0,NO-ASSERT (smoke),
+test_ai_container.py,TestReadAccess::test_getitem_and_get,3,0,STRONG,
+test_ai_container.py,TestReadAccess::test_missing_key_raises_nonexistent,0,1,STRONG,
+test_ai_container.py,TestReadAccess::test_nonexistent_is_keyerror,0,1,STRONG,
+test_ai_container.py,TestReadAccess::test_contains_keys_items,5,0,PARTIAL,substring: 'a' in doc
+test_ai_container.py,TestReadAccess::test_item_method,1,1,STRONG,
+test_ai_container.py,TestReadAccess::test_last_item,1,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_update_value_keeps_comment,1,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_add_key_to_existing_table,3,0,PARTIAL,"substring: 'click = ""^8""' in out"
+test_ai_container.py,TestEditingPreservesStyle::test_add_new_top_level_table,2,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_add_scalar_goes_before_tables,2,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_delete_key_removes_line,1,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_delete_table,2,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_replace_table_with_scalar,1,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_replace_preserves_position,1,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_rename_by_pop_and_set,1,0,STRONG,
+test_ai_container.py,TestEditingPreservesStyle::test_update,1,0,STRONG,
+test_ai_container.py,TestAddAndAppend::test_add_duplicate_raises,0,1,STRONG,
+test_ai_container.py,TestAddAndAppend::test_append_duplicate_raises,0,1,STRONG,
+test_ai_container.py,TestAddAndAppend::test_add_comment_and_newline,1,0,STRONG,
+test_ai_container.py,TestAddAndAppend::test_remove_missing_raises,0,1,STRONG,
+test_ai_container.py,TestAddAndAppend::test_add_multiple_tables_order,1,0,STRONG,
+test_ai_container.py,TestDottedAndOutOfOrder::test_dotted_keys_access,1,0,STRONG,
+test_ai_container.py,TestDottedAndOutOfOrder::test_dotted_key_edit,1,0,STRONG,
+test_ai_container.py,TestDottedAndOutOfOrder::test_dotted_key_add,1,0,STRONG,
+test_ai_container.py,TestDottedAndOutOfOrder::test_out_of_order_table_proxy,2,0,STRONG,
+test_ai_container.py,TestDottedAndOutOfOrder::test_out_of_order_edit,1,0,STRONG,
+test_ai_container.py,TestDottedAndOutOfOrder::test_out_of_order_add_key,1,0,STRONG,
+test_ai_container.py,TestDottedAndOutOfOrder::test_out_of_order_delete,2,0,STRONG,
+test_ai_container.py,TestUnwrapCopySetdefault::test_unwrap_plain_types,3,0,STRONG,
+test_ai_container.py,TestUnwrapCopySetdefault::test_value_property,1,0,STRONG,
+test_ai_container.py,TestUnwrapCopySetdefault::test_copy_is_shallow_independent_top_level,1,0,STRONG,
+test_ai_container.py,TestUnwrapCopySetdefault::test_deepcopy,2,0,STRONG,
+test_ai_container.py,TestUnwrapCopySetdefault::test_setdefault_existing,1,0,STRONG,
+test_ai_container.py,TestUnwrapCopySetdefault::test_setdefault_new,2,0,STRONG,
+test_ai_container.py,TestUnwrapCopySetdefault::test_clear,1,0,STRONG,
+test_ai_container.py,TestEquality::test_doc_equals_dict,1,0,STRONG,
+test_ai_container.py,TestEquality::test_str_and_repr,2,0,PARTIAL,substring: 'a' in repr(doc)
+test_ai_items.py,TestItemConversion::test_types,1,0,WEAK,"type-only: isinstance(item(value), cls)"
+test_ai_items.py,TestItemConversion::test_bool_is_not_integer,1,0,STRONG,
+test_ai_items.py,TestItemConversion::test_item_passthrough,1,0,STRONG,
+test_ai_items.py,TestItemConversion::test_list_of_dicts_is_aot,2,0,PARTIAL,"type-only: isinstance(a, AoT)"
+test_ai_items.py,TestItemConversion::test_list_of_dicts_inside_array_is_inline,2,0,WEAK,"type-only: isinstance(a, Array); type-only: isinstance(a[0][0], InlineTable)"
+test_ai_items.py,TestItemConversion::test_dict_inside_array_becomes_inline_table,2,0,PARTIAL,"type-only: isinstance(a[1], InlineTable)"
+test_ai_items.py,TestItemConversion::test_empty_list,2,0,PARTIAL,"type-only: isinstance(a, Array)"
+test_ai_items.py,TestItemConversion::test_unsupported,0,1,STRONG,
+test_ai_items.py,TestItemConversion::test_none_unsupported,0,1,STRONG,
+test_ai_items.py,TestItemConversion::test_utc_datetime_renders_z,1,0,STRONG,
+test_ai_items.py,TestItemConversion::test_sort_keys_puts_tables_last,1,0,STRONG,
+test_ai_items.py,TestStringType::test_select,1,0,STRONG,
+test_ai_items.py,TestStringType::test_predicates,4,0,STRONG,
+test_ai_items.py,TestStringType::test_toggle,2,0,STRONG,
+test_ai_items.py,TestStringType::test_unit,2,0,STRONG,
+test_ai_items.py,TestStringFromRaw::test_basic,2,0,STRONG,
+test_ai_items.py,TestStringFromRaw::test_escapes_control_char,1,0,STRONG,
+test_ai_items.py,TestStringFromRaw::test_literal_rejects_newline,0,1,STRONG,
+test_ai_items.py,TestStringFromRaw::test_multiline_literal_rejects_triple_quote,0,1,STRONG,
+test_ai_items.py,TestStringFromRaw::test_multiline_leading_newline_preserved,1,0,STRONG,
+test_ai_items.py,TestStringFromRaw::test_concat_keeps_type,2,0,PARTIAL,"type-only: isinstance(s, String)"
+test_ai_items.py,TestStringFromRaw::test_unwrap_is_plain_str,1,0,STRONG,
+test_ai_items.py,TestIntegerFloat::test_integer_arithmetic_returns_integer,2,0,PARTIAL,"type-only: isinstance(r, Integer)"
+test_ai_items.py,TestIntegerFloat::test_integer_true_division_returns_float,2,0,PARTIAL,"type-only: isinstance(r, Float)"
+test_ai_items.py,TestIntegerFloat::test_integer_reflected,2,0,PARTIAL,"type-only: isinstance(1 + item(5), Integer)"
+test_ai_items.py,TestIntegerFloat::test_integer_bitwise,6,0,PARTIAL,"type-only: isinstance(~i, Integer)"
+test_ai_items.py,TestIntegerFloat::test_integer_keeps_trivia_comment,1,0,STRONG,
+test_ai_items.py,TestIntegerFloat::test_integer_unwrap,1,0,STRONG,
+test_ai_items.py,TestIntegerFloat::test_float_arithmetic,2,0,PARTIAL,"type-only: isinstance(r, Float)"
+test_ai_items.py,TestIntegerFloat::test_float_unwrap,1,0,STRONG,
+test_ai_items.py,TestIntegerFloat::test_hash_matches_python,2,0,STRONG,
+test_ai_items.py,TestBool::test_bool_behaviour,6,0,STRONG,
+test_ai_items.py,TestBool::test_hash,1,0,STRONG,
+test_ai_items.py,TestBool::test_pickle_bool_value,1,0,STRONG,
+test_ai_items.py,TestDates::test_date_add_sub,4,0,PARTIAL,"type-only: isinstance(d + dt.timedelta(days=1), Date)"
+test_ai_items.py,TestDates::test_date_replace,2,0,PARTIAL,"type-only: isinstance(d, Date)"
+test_ai_items.py,TestDates::test_datetime_add,2,0,PARTIAL,"type-only: isinstance(r, DateTime)"
+test_ai_items.py,TestDates::test_datetime_sub_datetime,1,0,STRONG,
+test_ai_items.py,TestDates::test_datetime_astimezone,2,0,PARTIAL,"type-only: isinstance(r, DateTime)"
+test_ai_items.py,TestDates::test_time_replace,2,0,PARTIAL,"type-only: isinstance(t, Time)"
+test_ai_items.py,TestDates::test_unwrap_types,3,0,STRONG,
+test_ai_items.py,TestArray::test_append_and_render,1,0,STRONG,
+test_ai_items.py,TestArray::test_insert,2,0,STRONG,
+test_ai_items.py,TestArray::test_insert_negative,1,0,STRONG,
+test_ai_items.py,TestArray::test_setitem,1,0,STRONG,
+test_ai_items.py,TestArray::test_setitem_negative,1,0,STRONG,
+test_ai_items.py,TestArray::test_slice_assignment_rejected,1,1,PARTIAL,broad exception: raises(ValueError) without match
+test_ai_items.py,TestArray::test_delitem,2,0,STRONG,
+test_ai_items.py,TestArray::test_delitem_last,1,0,STRONG,
+test_ai_items.py,TestArray::test_del_slice,1,0,STRONG,
+test_ai_items.py,TestArray::test_remove_and_pop,3,0,STRONG,
+test_ai_items.py,TestArray::test_clear,2,0,STRONG,
+test_ai_items.py,TestArray::test_multiline,1,0,STRONG,
+test_ai_items.py,TestArray::test_add_line,2,0,STRONG,
+test_ai_items.py,TestArray::test_add_line_with_comment,2,0,PARTIAL,substring: '# first' in a.as_string()
+test_ai_items.py,TestArray::test_add_line_comment_with_newline_rejected,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_items.py,TestArray::test_unwrap,3,0,STRONG,
+test_ai_items.py,TestArray::test_copy,1,0,STRONG,
+test_ai_items.py,TestArray::test_extend,1,0,STRONG,
+test_ai_items.py,TestTable::test_append_and_getitem,2,0,PARTIAL,substring: 'a' in t
+test_ai_items.py,TestTable::test_add_is_append,1,0,STRONG,
+test_ai_items.py,TestTable::test_remove,2,0,STRONG,
+test_ai_items.py,TestTable::test_delitem,1,0,STRONG,
+test_ai_items.py,TestTable::test_setdefault,2,0,STRONG,
+test_ai_items.py,TestTable::test_unwrap_nested,2,0,STRONG,
+test_ai_items.py,TestTable::test_is_super_table,2,0,STRONG,
+test_ai_items.py,TestTable::test_indent,1,0,WEAK,substring: '  x = 1' in doc.as_string()
+test_ai_items.py,TestTable::test_iteration_and_len,2,0,STRONG,
+test_ai_items.py,TestTable::test_copy_independent,1,0,STRONG,
+test_ai_items.py,TestInlineTable::test_render,1,0,STRONG,
+test_ai_items.py,TestInlineTable::test_remove,1,0,STRONG,
+test_ai_items.py,TestInlineTable::test_nested_dict_becomes_inline,2,0,PARTIAL,"type-only: isinstance(t['n'], InlineTable)"
+test_ai_items.py,TestInlineTable::test_in_document,1,0,STRONG,
+test_ai_items.py,TestAoT::test_append_dict,2,0,PARTIAL,"type-only: isinstance(a[0], Table)"
+test_ai_items.py,TestAoT::test_in_document,1,0,STRONG,
+test_ai_items.py,TestAoT::test_delete_element,1,0,STRONG,
+test_ai_items.py,TestKeys::test_bare,2,0,STRONG,
+test_ai_items.py,TestKeys::test_equality_and_hash,3,0,STRONG,
+test_ai_items.py,TestKeys::test_concat,3,0,PARTIAL,"type-only: isinstance(k, DottedKey)"
+test_ai_items.py,TestKeys::test_dotted_iter,1,0,STRONG,
+test_ai_items.py,TestKeys::test_quoted_rendering,2,0,STRONG,
+test_ai_items.py,TestItemDecorations::test_comment,1,0,STRONG,
+test_ai_items.py,TestItemDecorations::test_comment_adds_hash,1,0,STRONG,
+test_ai_items.py,TestItemDecorations::test_comment_rejects_newline,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_items.py,TestItemDecorations::test_indent,1,0,STRONG,
+test_ai_items.py,TestItemDecorations::test_type_predicates,4,0,STRONG,
+test_ai_items.py,TestPickle::test_bool_equals_bool,1,0,STRONG,
+test_ai_items.py,TestPickle::test_round_trip,1,0,STRONG,
+test_ai_items.py,TestPickle::test_document,1,0,STRONG,
+test_ai_items.py,TestWhitespaceComment::test_whitespace,3,0,STRONG,
+test_ai_items.py,TestWhitespaceComment::test_comment_item,1,0,WEAK,substring: '# x' in c.as_string()
+test_ai_parser.py,TestKeys::test_bare_key,1,0,STRONG,
+test_ai_parser.py,TestKeys::test_bare_key_with_dash_and_underscore,1,0,STRONG,
+test_ai_parser.py,TestKeys::test_quoted_basic_key,1,0,STRONG,
+test_ai_parser.py,TestKeys::test_quoted_literal_key,1,0,STRONG,
+test_ai_parser.py,TestKeys::test_empty_quoted_key,1,0,STRONG,
+test_ai_parser.py,TestKeys::test_dotted_key_creates_tables,2,0,STRONG,
+test_ai_parser.py,TestKeys::test_dotted_key_with_whitespace,1,0,STRONG,
+test_ai_parser.py,TestKeys::test_missing_key,0,1,STRONG,
+test_ai_parser.py,TestKeys::test_duplicate_key,0,1,STRONG,
+test_ai_parser.py,TestKeys::test_missing_equals,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestStrings::test_string_values,1,0,STRONG,
+test_ai_parser.py,TestStrings::test_multiline_allows_quotes_inside,1,0,STRONG,
+test_ai_parser.py,TestStrings::test_unterminated_basic_string,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestStrings::test_unterminated_multiline_string,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestStrings::test_newline_in_basic_string,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestStrings::test_invalid_escape,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestStrings::test_invalid_unicode_escape,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestStrings::test_control_char_rejected,0,1,STRONG,
+test_ai_parser.py,TestIntegers::test_valid,1,0,STRONG,
+test_ai_parser.py,TestIntegers::test_preserves_raw_representation,1,0,STRONG,
+test_ai_parser.py,TestIntegers::test_invalid,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestFloats::test_valid,1,0,STRONG,
+test_ai_parser.py,TestFloats::test_inf,2,0,STRONG,
+test_ai_parser.py,TestFloats::test_nan,1,0,STRONG,
+test_ai_parser.py,TestFloats::test_invalid,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestBooleans::test_true_false,2,0,STRONG,
+test_ai_parser.py,TestBooleans::test_invalid,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestDates::test_offset_datetime_z,1,0,STRONG,
+test_ai_parser.py,TestDates::test_offset_datetime_negative,2,0,STRONG,
+test_ai_parser.py,TestDates::test_space_separator,1,0,STRONG,
+test_ai_parser.py,TestDates::test_local_datetime,1,0,STRONG,
+test_ai_parser.py,TestDates::test_local_date,1,0,STRONG,
+test_ai_parser.py,TestDates::test_local_time,1,0,STRONG,
+test_ai_parser.py,TestDates::test_time_fraction,1,0,STRONG,
+test_ai_parser.py,TestDates::test_time_without_seconds,1,0,STRONG,
+test_ai_parser.py,TestDates::test_invalid,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestArrays::test_simple,2,0,PARTIAL,"type-only: isinstance(a, Array)"
+test_ai_parser.py,TestArrays::test_empty,1,0,STRONG,
+test_ai_parser.py,TestArrays::test_nested,1,0,STRONG,
+test_ai_parser.py,TestArrays::test_mixed_types_allowed,1,0,STRONG,
+test_ai_parser.py,TestArrays::test_multiline_trailing_comma_and_comments,2,0,STRONG,
+test_ai_parser.py,TestArrays::test_missing_comma,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestArrays::test_unclosed,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestArrays::test_leading_comma,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestInlineTables::test_simple,2,0,PARTIAL,"type-only: isinstance(t, InlineTable)"
+test_ai_parser.py,TestInlineTables::test_empty,1,0,STRONG,
+test_ai_parser.py,TestInlineTables::test_nested_and_dotted,1,0,STRONG,
+test_ai_parser.py,TestInlineTables::test_multiline_inline_table_toml11,1,0,STRONG,
+test_ai_parser.py,TestInlineTables::test_duplicate_key_in_inline,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestInlineTables::test_unclosed,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestTables::test_standard_table,2,0,PARTIAL,"type-only: isinstance(doc['t'], Table)"
+test_ai_parser.py,TestTables::test_dotted_header,1,0,STRONG,
+test_ai_parser.py,TestTables::test_quoted_header,1,0,STRONG,
+test_ai_parser.py,TestTables::test_super_table_defined_later,1,0,STRONG,
+test_ai_parser.py,TestTables::test_redefined_table,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestTables::test_empty_header,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestTables::test_unclosed_header,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestTables::test_out_of_order_tables_round_trip,3,0,STRONG,
+test_ai_parser.py,TestArrayOfTables::test_aot,2,0,PARTIAL,"type-only: isinstance(doc['p'], AoT)"
+test_ai_parser.py,TestArrayOfTables::test_nested_aot,1,0,STRONG,
+test_ai_parser.py,TestArrayOfTables::test_static_array_then_aot_conflict,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestComments::test_full_line_and_trailing,2,0,STRONG,
+test_ai_parser.py,TestComments::test_hash_in_string_is_not_comment,1,0,STRONG,
+test_ai_parser.py,TestComments::test_control_char_in_comment,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_parser.py,TestErrorPositions::test_line_and_col,2,1,PARTIAL,broad exception: raises(ParseError) without match; inequality: exc.value.col >= 4
+test_ai_parser.py,TestErrorPositions::test_message_contains_position,1,1,WEAK,broad exception: raises(ParseError) without match; substring: 'line 1' in str(exc.value)
+test_ai_parser.py,TestErrorPositions::test_eof_in_value,0,1,WEAK,"broad exception: raises((UnexpectedEofError, ParseError)) without match"
+test_ai_parser.py,TestWhitespaceAndNewlines::test_crlf_newlines,2,0,STRONG,
+test_ai_parser.py,TestWhitespaceAndNewlines::test_tabs_as_whitespace,1,0,STRONG,
+test_ai_parser.py,TestWhitespaceAndNewlines::test_bare_cr_rejected,0,1,WEAK,broad exception: raises(ParseError) without match
+test_ai_toml_file.py,TestTOMLFile::test_read_values,2,0,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_accepts_str_path,1,0,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_round_trip_lf,1,0,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_round_trip_crlf,2,0,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_round_trip_mixed_kept,1,0,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_edit_and_write,1,0,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_utf8,1,0,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_missing_file,0,1,STRONG,
+test_ai_toml_file.py,TestTOMLFile::test_write_new_file,2,0,PARTIAL,substring: 'a = 1' in p.read_text()
+test_ai_utils.py,TestParseRfc3339::test_datetime_z,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_datetime_lowercase,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_datetime_positive_offset,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_datetime_negative_offset,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_datetime_no_seconds,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_fraction_padding_and_truncation,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_date,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_time,1,0,STRONG,
+test_ai_utils.py,TestParseRfc3339::test_invalid,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_utils.py,TestParseRfc3339::test_invalid_calendar_date,0,1,WEAK,broad exception: raises(ValueError) without match
+test_ai_utils.py,TestEscapeString::test_basic,1,0,STRONG,
+test_ai_utils.py,TestEscapeString::test_custom_sequences,1,0,STRONG,
+test_ai_utils.py,TestEscapeString::test_bytes_input,1,0,STRONG,
+test_ai_utils.py,TestMergeDicts::test_merge_nested,1,0,STRONG,
+test_ai_utils.py,TestMergeDicts::test_overwrite_scalar,1,0,STRONG,
+test_ai_utils.py,TestSource::test_initial_state,3,0,STRONG,
+test_ai_utils.py,TestSource::test_inc_until_end,5,0,STRONG,
+test_ai_utils.py,TestSource::test_inc_raises_when_asked,0,1,STRONG,
+test_ai_utils.py,TestSource::test_mark_and_extract,1,0,STRONG,
+test_ai_utils.py,TestSource::test_consume,1,0,STRONG,
+test_ai_utils.py,TestSource::test_consume_min_not_met,0,1,STRONG,
+test_ai_utils.py,TestSource::test_consume_max,1,0,STRONG,
+test_ai_utils.py,TestSource::test_advance_while_until,4,0,STRONG,
+test_ai_utils.py,TestSource::test_state_restore_on_exception,1,1,STRONG,
+test_ai_utils.py,TestSource::test_state_restore_flag,1,0,STRONG,
+test_ai_utils.py,TestSource::test_linecol,1,0,STRONG,
+test_ai_utils.py,TestSource::test_nul_is_not_eof,2,0,STRONG,
+test_ai_utils.py,TestExceptions::test_parse_error_attrs,4,0,PARTIAL,substring: 'boom' in str(e); substring: 'line 3 col 7' in str(e)
+test_ai_utils.py,TestExceptions::test_hierarchy,3,0,STRONG,
+test_ai_utils.py,TestExceptions::test_messages,4,0,PARTIAL,"disjunctive: 'Mixed types' in str(MixedArrayTypesError(1, 1)) or 'mixed' in str(Mix; substring: 'Empty key' in str(EmptyKeyError(1, 1)); substring: 'Key ""x"" does not exist.' in str(NonExistentKey('x'))"
+test_ai_utils.py,TestExceptions::test_unexpected_char,1,0,WEAK,substring: '@' in str(e)
+test_ai_utils.py,TestExceptions::test_invalid_control_char,1,0,WEAK,substring: 'strings' in str(e)
+test_ai_utils.py,TestExceptions::test_invalid_string_error,1,0,WEAK,"type-only: isinstance(e, ValueError)"

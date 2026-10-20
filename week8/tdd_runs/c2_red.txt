@@ -1,0 +1,8 @@
+=========================== short test summary info ============================
+FAILED tests_tdd/test_tdd_cycles.py::test_c2_multiline_basic_escapes_bare_cr[a\rb]
+FAILED tests_tdd/test_tdd_cycles.py::test_c2_multiline_basic_escapes_bare_cr[\r]
+FAILED tests_tdd/test_tdd_cycles.py::test_c2_multiline_basic_escapes_bare_cr[a\r\rb]
+FAILED tests_tdd/test_tdd_cycles.py::test_c2_multiline_basic_escapes_bare_cr[end\r]
+FAILED tests_tdd/test_tdd_cycles.py::test_c2_multiline_literal_rejects_bare_cr[a\rb]
+FAILED tests_tdd/test_tdd_cycles.py::test_c2_multiline_literal_rejects_bare_cr[\r]
+6 failed, 2 passed, 5 deselected in 0.19s

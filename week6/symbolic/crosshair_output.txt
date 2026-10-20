@@ -1,0 +1,1 @@
+ch_date.py:10: error: false when calling date_never_returns_datetime('0001-10-30 00:00') (which returns False)

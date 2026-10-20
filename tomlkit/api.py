@@ -10,6 +10,7 @@ from typing import TYPE_CHECKING
 from typing import Any
 from typing import TypeVar
 
+from tomlkit._utils import BARE_CR
 from tomlkit._utils import parse_rfc3339
 from tomlkit.container import Container
 from tomlkit.exceptions import UnexpectedCharError
@@ -153,31 +154,28 @@ def string(
     return String.from_raw(raw, type_, escape)
 
 
+def _parse_rfc3339_as(raw: str, kind: type, name: str) -> Any:
+    """Parse ``raw`` and require exactly ``kind`` (not a subclass such as
+    ``datetime`` for ``date``)."""
+    value = parse_rfc3339(raw)
+    if type(value) is not kind:
+        raise ValueError(f"{name}() only accepts {name} strings.")
+    return value
+
+
 def date(raw: str) -> Date:
     """Create a TOML date."""
-    value = parse_rfc3339(raw)
-    if not isinstance(value, _datetime.date):
-        raise ValueError("date() only accepts date strings.")
-
-    return item(value)
+    return item(_parse_rfc3339_as(raw, _datetime.date, "date"))
 
 
 def time(raw: str) -> Time:
     """Create a TOML time."""
-    value = parse_rfc3339(raw)
-    if not isinstance(value, _datetime.time):
-        raise ValueError("time() only accepts time strings.")
-
-    return item(value)
+    return item(_parse_rfc3339_as(raw, _datetime.time, "time"))
 
 
 def datetime(raw: str) -> DateTime:
     """Create a TOML datetime."""
-    value = parse_rfc3339(raw)
-    if not isinstance(value, _datetime.datetime):
-        raise ValueError("datetime() only accepts datetime strings.")
-
-    return item(value)
+    return item(_parse_rfc3339_as(raw, _datetime.datetime, "datetime"))
 
 
 def array(raw: str = "[]") -> Array:
@@ -314,7 +312,7 @@ def comment(string: str) -> Comment:
     A multiline string produces one ``#``-prefixed line per line so that the
     result is still valid TOML.
     """
-    lines = string.split("\n")
+    lines = BARE_CR.sub("\n", string).split("\n")
     rendered = "\n".join(f"# {line}" if line else "#" for line in lines)
     return Comment(Trivia(comment_ws="  ", comment=rendered))
 

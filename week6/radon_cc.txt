@@ -1,0 +1,33 @@
+tomlkit/container.py
+    M 225:4 Container.append - F (74)
+    M 871:4 Container._replace_at - F (41)
+    M 661:4 Container._render_table - E (31)
+    M 1173:4 OutOfOrderTableProxy.__setitem__ - C (16)
+    M 420:4 Container._validate_table_candidate - C (15)
+    M 563:4 Container._insert_at - C (15)
+    F 1272:0 _equal_with_nan - C (13)
+    M 516:4 Container._insert_after - C (13)
+    M 153:4 Container._get_last_index_before_table - C (12)
+    M 633:4 Container.as_string - C (11)
+tomlkit/parser.py
+    M 867:4 Parser._parse_string - E (40)
+    M 1006:4 Parser._parse_table - E (37)
+    M 480:4 Parser._parse_value - D (25)
+    M 292:4 Parser._parse_comment_trail - D (23)
+    M 744:4 Parser._parse_number - D (22)
+    M 633:4 Parser._parse_array - C (13)
+    M 175:4 Parser.parse - C (12)
+    M 811:4 Parser._parse_escaped_char - C (12)
+tomlkit/_utils.py
+    F 48:0 parse_rfc3339 - C (11)
+tomlkit/items.py
+    M 1655:4 Array.__delitem__ - E (36)
+    F 114:0 item - E (31)
+    M 2055:4 InlineTable.as_string - D (30)
+    M 1595:4 Array.insert - D (26)
+    M 1493:4 Array.add_line - D (24)
+    M 2316:4 AoT.insert - C (15)
+    M 1395:4 Array._group_values - C (11)
+
+524 blocks (classes, functions, methods) analyzed.
+Average complexity: A (3.0381679389312977)
