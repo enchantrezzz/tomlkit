@@ -1,13 +1,13 @@
 {
-  "tests": 387,
-  "mutants_in_matrix": 273,
-  "apfd_risk_based": 0.8381,
-  "apfd_default_order": 0.6887,
-  "apfd_random_mean": 0.7479,
-  "apfd_random_min": 0.6921,
-  "apfd_random_max": 0.8048,
-  "tests_to_detect_50pct_risk_based": 12,
-  "tests_to_detect_90pct_risk_based": 245,
-  "tests_to_detect_50pct_default_order": 103,
-  "tests_to_detect_90pct_default_order": 284
+  "tests": 149,
+  "mutants_in_matrix": 258,
+  "apfd_risk_based": 0.7722,
+  "apfd_default_order": 0.6369,
+  "apfd_random_mean": 0.6911,
+  "apfd_random_min": 0.6272,
+  "apfd_random_max": 0.7532,
+  "tests_to_detect_50pct_risk_based": 16,
+  "tests_to_detect_90pct_risk_based": 106,
+  "tests_to_detect_50pct_default_order": 51,
+  "tests_to_detect_90pct_default_order": 120
 }

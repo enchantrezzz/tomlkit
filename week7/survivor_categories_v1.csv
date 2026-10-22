@@ -1112,24 +1112,14 @@ tomlkit.api.x_dumps__mutmut_14,Exception message or construction,"msg = f""Expec
 tomlkit.api.x_dumps__mutmut_15,Exception message or construction,raise TypeError(msg) from ex,raise TypeError(None) from ex
 tomlkit.api.x_dump__mutmut_1,Argument dropped or set to None,"def dump(data: Mapping[str, Any], fp: IO[str], *, sort_keys: bool = False) -> None:","def dump(data: Mapping[str, Any], fp: IO[str], *, sort_keys: bool = True) -> None:"
 tomlkit.api.x_date__mutmut_4,Exception message or construction,"raise ValueError(""date() only accepts date strings."")",raise ValueError(None)
-tomlkit.api.x_date__mutmut_5,Exception message or construction,"raise ValueError(""date() only accepts date strings."")","raise ValueError(""XXdate() only accepts date strings.XX"")"
-tomlkit.api.x_date__mutmut_6,Exception message or construction,"raise ValueError(""date() only accepts date strings."")","raise ValueError(""DATE() ONLY ACCEPTS DATE STRINGS."")"
 tomlkit.api.x_time__mutmut_4,Exception message or construction,"raise ValueError(""time() only accepts time strings."")",raise ValueError(None)
-tomlkit.api.x_time__mutmut_5,Exception message or construction,"raise ValueError(""time() only accepts time strings."")","raise ValueError(""XXtime() only accepts time strings.XX"")"
-tomlkit.api.x_time__mutmut_6,Exception message or construction,"raise ValueError(""time() only accepts time strings."")","raise ValueError(""TIME() ONLY ACCEPTS TIME STRINGS."")"
 tomlkit.api.x_datetime__mutmut_4,Exception message or construction,"raise ValueError(""datetime() only accepts datetime strings."")",raise ValueError(None)
-tomlkit.api.x_datetime__mutmut_5,Exception message or construction,"raise ValueError(""datetime() only accepts datetime strings."")","raise ValueError(""XXdatetime() only accepts datetime strings.XX"")"
-tomlkit.api.x_datetime__mutmut_6,Exception message or construction,"raise ValueError(""datetime() only accepts datetime strings."")","raise ValueError(""DATETIME() ONLY ACCEPTS DATETIME STRINGS."")"
 tomlkit.api.x_array__mutmut_5,Exception message or construction,"raise ValueError(f""Expected an array, got {type(v)}"")",raise ValueError(None)
 tomlkit.api.x_array__mutmut_6,Exception message or construction,"raise ValueError(f""Expected an array, got {type(v)}"")","raise ValueError(f""Expected an array, got {type(None)}"")"
 tomlkit.api.x_table__mutmut_3,Control flow (continue/break/return),"return Table(Container(), Trivia(), False, is_super_table)","return Table(Container(), Trivia(), None, is_super_table)"
 tomlkit.api.x_value__mutmut_6,Exception message or construction,"raise parser.parse_error(UnexpectedCharError, char=parser._current)","raise parser.parse_error(UnexpectedCharError, char=None)"
 tomlkit.api.x_comment__mutmut_2,Argument dropped or set to None,"lines = string.split(""\n"")",lines = string.split(None)
-tomlkit.api.x_comment__mutmut_8,"Boolean logic (and/or, True/False, not)","rendered = ""\n"".join(f""# {line}"" if line else ""#"" for line in lines)","rendered = ""\n"".join(f""# {line}"" if (line) or True else ""#"" for line in lines)"
-tomlkit.api.x_comment__mutmut_9,String literal changed (XX..XX / case),"rendered = ""\n"".join(f""# {line}"" if line else ""#"" for line in lines)","rendered = ""\n"".join(f""# {line}"" if line else ""XX#XX"" for line in lines)"
-tomlkit.api.x_comment__mutmut_11,Control flow (continue/break/return),"return Comment(Trivia(comment_ws=""  "", comment=rendered))","return Comment(Trivia(comment_ws=None, comment=rendered))"
 tomlkit.api.x_comment__mutmut_13,Control flow (continue/break/return),"return Comment(Trivia(comment_ws=""  "", comment=rendered))",return Comment(Trivia(comment=rendered))
-tomlkit.api.x_comment__mutmut_15,String literal changed (XX..XX / case),"return Comment(Trivia(comment_ws=""  "", comment=rendered))","return Comment(Trivia(comment_ws=""XX  XX"", comment=rendered))"
 tomlkit.exceptions.xǁParseErrorǁ__init____mutmut_4,Exception message or construction,"message = ""TOML parse error""",message = None
 tomlkit.exceptions.xǁParseErrorǁ__init____mutmut_5,Exception message or construction,"message = ""TOML parse error""","message = ""XXTOML parse errorXX"""
 tomlkit.exceptions.xǁParseErrorǁ__init____mutmut_6,Exception message or construction,"message = ""TOML parse error""","message = ""toml parse error"""
@@ -1818,7 +1808,6 @@ tomlkit.items.xǁStringǁ_getstate__mutmut_1,"Boundary / off-by-one (< vs <=, +1
 tomlkit.items.xǁStringǁfrom_raw__mutmut_7,Exception message or construction,"raise InvalidStringError(value, invalid, type_.value)","raise InvalidStringError(None, invalid, type_.value)"
 tomlkit.items.xǁStringǁfrom_raw__mutmut_8,Argument dropped or set to None,"raise InvalidStringError(value, invalid, type_.value)","raise InvalidStringError(value, None, type_.value)"
 tomlkit.items.xǁStringǁfrom_raw__mutmut_9,Exception message or construction,"raise InvalidStringError(value, invalid, type_.value)","raise InvalidStringError(value, invalid, None)"
-tomlkit.items.xǁStringǁfrom_raw__mutmut_26,String literal changed (XX..XX / case),"if type_.is_multiline() and string_value[:1] in (""\n"", ""\r""):","if type_.is_multiline() and string_value[:1] in (""\n"", ""XX\rXX""):"
 tomlkit.items.xǁAoTǁ__init____mutmut_2,Argument dropped or set to None,self.name = name,self.name = None
 tomlkit.items.xǁAoTǁ__init____mutmut_6,Argument dropped or set to None,"super().__init__(Trivia(trail=""""))",super().__init__(Trivia(trail=None))
 tomlkit.items.xǁAoTǁ__init____mutmut_7,String literal changed (XX..XX / case),"super().__init__(Trivia(trail=""""))","super().__init__(Trivia(trail=""XXXX""))"
@@ -1877,3 +1866,26 @@ tomlkit.items.xǁAoTǁinsert__mutmut_74,String literal changed (XX..XX / case),"
 tomlkit.items.xǁAoTǁinsert__mutmut_81,Argument dropped or set to None,"list.insert(self, index, value)","list.insert(self, index, None)"
 tomlkit.items.xǁNullǁ__init____mutmut_2,Argument dropped or set to None,"super().__init__(Trivia(trail=""""))",super().__init__(Trivia(trail=None))
 tomlkit.items.xǁNullǁ__init____mutmut_3,String literal changed (XX..XX / case),"super().__init__(Trivia(trail=""""))","super().__init__(Trivia(trail=""XXXX""))"
+tomlkit.api.x__parse_rfc3339_as__mutmut_5,Exception message or construction,"-- tomlkit/api.py raise ValueError(f""{name}() only accepts {name} strings."")",++ tomlkit/api.py raise ValueError(None)
+tomlkit.api.x_comment__mutmut_14,String literal changed (XX..XX / case),"-- tomlkit/api.py rendered = ""\n"".join(f""# {line}"" if line else ""#"" for line in lines)","++ tomlkit/api.py rendered = ""\n"".join(f""# {line}"" if line else ""XX#XX"" for line in lines)"
+tomlkit.api.x_comment__mutmut_16,Argument dropped or set to None,"-- tomlkit/api.py return Comment(Trivia(comment_ws=""  "", comment=rendered))","++ tomlkit/api.py return Comment(Trivia(comment_ws=None, comment=rendered))"
+tomlkit.api.x_comment__mutmut_18,Arithmetic / assignment operator,"-- tomlkit/api.py return Comment(Trivia(comment_ws=""  "", comment=rendered))",++ tomlkit/api.py return Comment(Trivia(comment=rendered))
+tomlkit.api.x_comment__mutmut_20,String literal changed (XX..XX / case),"-- tomlkit/api.py return Comment(Trivia(comment_ws=""  "", comment=rendered))","++ tomlkit/api.py return Comment(Trivia(comment_ws=""XX  XX"", comment=rendered))"
+tomlkit.api.x_date__mutmut_8,String literal changed (XX..XX / case),"-- tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.date, ""date""))","++ tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.date, ""XXdateXX""))"
+tomlkit.api.x_date__mutmut_9,Arithmetic / assignment operator,"-- tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.date, ""date""))","++ tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.date, ""DATE""))"
+tomlkit.api.x_datetime__mutmut_8,String literal changed (XX..XX / case),"-- tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.datetime, ""datetime""))","++ tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.datetime, ""XXdatetimeXX""))"
+tomlkit.api.x_datetime__mutmut_9,Arithmetic / assignment operator,"-- tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.datetime, ""datetime""))","++ tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.datetime, ""DATETIME""))"
+tomlkit.api.x_time__mutmut_8,String literal changed (XX..XX / case),"-- tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.time, ""time""))","++ tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.time, ""XXtimeXX""))"
+tomlkit.api.x_time__mutmut_9,Arithmetic / assignment operator,"-- tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.time, ""time""))","++ tomlkit/api.py return item(_parse_rfc3339_as(raw, _datetime.time, ""TIME""))"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_14,"Boolean logic (and/or, True/False, not)",-- tomlkit/items.py if type_ is StringType.MLL and BARE_CR.search(value):,++ tomlkit/items.py if type_ is not StringType.MLL and BARE_CR.search(value):
+tomlkit.items.xǁStringǁfrom_raw__mutmut_16,Exception message or construction,"-- tomlkit/items.py raise InvalidStringError(value, [""\r""], type_.value)","++ tomlkit/items.py raise InvalidStringError(None, [""\r""], type_.value)"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_17,Argument dropped or set to None,"-- tomlkit/items.py raise InvalidStringError(value, [""\r""], type_.value)","++ tomlkit/items.py raise InvalidStringError(value, None, type_.value)"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_18,Exception message or construction,"-- tomlkit/items.py raise InvalidStringError(value, [""\r""], type_.value)","++ tomlkit/items.py raise InvalidStringError(value, [""\r""], None)"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_19,Arithmetic / assignment operator,"-- tomlkit/items.py raise InvalidStringError(value, [""\r""], type_.value)","++ tomlkit/items.py raise InvalidStringError([""\r""], type_.value)"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_20,Arithmetic / assignment operator,"-- tomlkit/items.py raise InvalidStringError(value, [""\r""], type_.value)","++ tomlkit/items.py raise InvalidStringError(value, type_.value)"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_21,Arithmetic / assignment operator,"-- tomlkit/items.py raise InvalidStringError(value, [""\r""], type_.value)","++ tomlkit/items.py raise InvalidStringError(value, [""\r""], )"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_22,Exception message or construction,"-- tomlkit/items.py raise InvalidStringError(value, [""\r""], type_.value)","++ tomlkit/items.py raise InvalidStringError(value, [""XX\rXX""], type_.value)"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_32,"Boolean logic (and/or, True/False, not)",-- tomlkit/items.py if type_ is StringType.MLB and escape:,++ tomlkit/items.py if type_ is StringType.MLB or escape:
+tomlkit.items.xǁStringǁfrom_raw__mutmut_33,"Boolean logic (and/or, True/False, not)",-- tomlkit/items.py if type_ is StringType.MLB and escape:,++ tomlkit/items.py if type_ is not StringType.MLB and escape:
+tomlkit.items.xǁStringǁfrom_raw__mutmut_39,String literal changed (XX..XX / case),"-- tomlkit/items.py string_value = BARE_CR.sub(r""\\r"", string_value)","++ tomlkit/items.py string_value = BARE_CR.sub(r""XX\\rXX"", string_value)"
+tomlkit.items.xǁStringǁfrom_raw__mutmut_44,String literal changed (XX..XX / case),"-- tomlkit/items.py if type_.is_multiline() and string_value[:1] in (""\n"", ""\r""):","++ tomlkit/items.py if type_.is_multiline() and string_value[:1] in (""\n"", ""XX\rXX""):"
