@@ -1,0 +1,13 @@
+USABILITY CHECK 5: Discoverability and built-in help
+
+Method: Array.insert
+Signature: (self, pos: 'int', value: 'Any') -> 'None'
+Docstring: 'S.insert(index, value) -- insert value before index'
+
+Method: Array.append
+Signature: (self, value)
+Docstring: 'S.append(value) -- append value to the end of the sequence'
+
+Method: Array.add_line
+Signature: (self, *items: 'Any', indent: 'str' = '    ', comment: 'str | None' = None, add_comma: 'bool' = True, newline: 'bool' = True) -> 'None'
+Docstring: 'Add multiple items in a line to control the format precisely.\nWhen add_comma is True, only accept actual values and\n", " will be added between values automatically.\n\n:Example:\n\n>>> a = array()\n>>> a.add_line(1, 2, 3)\n>>> a.add_line(4, 5, 6)\n>>> a.add_line(indent="")\n>>> print(a.as_string())\n[\n    1, 2, 3,\n    4, 5, 6,\n]'

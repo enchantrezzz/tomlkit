@@ -1,0 +1,26 @@
+USABILITY CHECK 4: Formatting after common array modifications
+
+Operation: append
+rendered='[1, 2, 3]'
+values=[1, 2, 3]
+reparsed=[1, 2, 3]
+
+Operation: insert at beginning
+rendered='[3,1, 2]'
+values=[3, 1, 2]
+reparsed=[3, 1, 2]
+
+Operation: insert in middle
+rendered='[1, 3, 2]'
+values=[1, 3, 2]
+reparsed=[1, 3, 2]
+
+Operation: replace first item
+rendered='[3, 2]'
+values=[3, 2]
+reparsed=[3, 2]
+
+Operation: delete first item
+rendered='[2]'
+values=[2]
+reparsed=[2]

@@ -1,0 +1,25 @@
+USABILITY CHECK 1: Error feedback for invalid TOML
+
+Case: leading-zero integer
+Input: 'value = 01'
+Exception type: InvalidNumberError
+Message: Invalid number at line 1 col 10
+Position attributes: line=1, col=10
+
+Case: unterminated string
+Input: 'value = "abc'
+Exception type: UnexpectedEofError
+Message: Unexpected end of file at line 1 col 12
+Position attributes: line=1, col=12
+
+Case: invalid escape
+Input: 'value = "a\\q"'
+Exception type: InvalidCharInStringError
+Message: Invalid character 'q' in string at line 1 col 11
+Position attributes: line=1, col=11
+
+Case: duplicate key
+Input: 'value = 1\nvalue = 2'
+Exception type: ParseError
+Message: Key "value" already exists. at line 2 col 9
+Position attributes: line=2, col=9

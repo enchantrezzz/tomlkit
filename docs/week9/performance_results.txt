@@ -1,0 +1,17 @@
+Light-touch tomlkit performance check
+Operations per repeat: 5000
+Repeats: 5
+Workload: parse, modify, serialize, and reparse
+Repeat 1: 2.130827 seconds, 2346.51 operations/second
+Repeat 2: 2.122317 seconds, 2355.92 operations/second
+Repeat 3: 2.075538 seconds, 2409.01 operations/second
+Repeat 4: 2.076870 seconds, 2407.47 operations/second
+Repeat 5: 2.072806 seconds, 2412.19 operations/second
+Total operations: 25000
+Total measured time: 10.478358 seconds
+Mean repeat time: 2.095672 seconds
+Median repeat time: 2.076870 seconds
+Minimum repeat time: 2.072806 seconds
+Maximum repeat time: 2.130827 seconds
+Overall throughput: 2385.87 operations/second
+Correctness check: all round-trip assertions passed
