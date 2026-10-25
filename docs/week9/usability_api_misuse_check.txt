@@ -1,0 +1,16 @@
+USABILITY CHECK 2: Feedback for common API misuse
+
+Case: access missing document key
+Exception type: NonExistentKey
+Message: 'Key "missing" does not exist.'
+
+Case: insert beyond array length
+Result: accepted, returned None
+
+Case: add unsupported object type
+Exception type: ConvertError
+Message: Unable to convert an object of <class 'object'> to a TOML item
+
+Case: add multiline array comment
+Exception type: ValueError
+Message: Comment cannot contain line breaks
