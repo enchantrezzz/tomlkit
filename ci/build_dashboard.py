@@ -225,6 +225,7 @@ def main() -> int:
         mutation_source = str(args.mutation_fallback)
         if mutation is not None:
             mutation["scope"] = f"committed Week 11 evidence ({mutation_source})"
+            mutation["runner"] = "mutmut 3.8.0 (Week 11 evidence)"
     priority = read_priority(args.priority)
     defects = read_defects(args.defects, args.sloc)
     baseline = read_baseline(args.baseline)
