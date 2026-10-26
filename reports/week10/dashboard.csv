@@ -1,0 +1,10 @@
+Indicator,Week 10 value,Notes
+Statement coverage,89.4%,2977 of 3330 statements (coverage.py totals)
+Branch coverage,84.2%,1282 of 1523 branches (coverage.py totals)
+Mutation score (brief formula),40%,4 killed / 10 total; tomlkit/_types.py only
+Mutation score (adjusted),80%,4 killed / 5 non-equivalent; tomlkit/_types.py only
+Passing tests,1063,1 xfailed (known defect M1)
+Total SLOC,4158,radon raw total
+Defects found,2,D8 and M1 (provisional; group log not yet consolidated)
+Defect density (per KLOC),0.48,2 / 4.158 (provisional)
+RTM completeness,RTM_PCT,RTM_PASSING of RTM_TOTAL requirements with a passing test

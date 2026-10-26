@@ -38,10 +38,14 @@ Repository: the-dezeray/tomlkit (fork of python-poetry/tomlkit)
 | D1 | 26 Oct 2026 | _CustomDict.__or__ drops existing keys because copy() returns {} (tomlkit/_types.py, line 66) | Mutation testing (mutant 7) |
 
 ## Step 5: Defect density
+
 - Lines of code: radon raw -s tomlkit, total SLOC = 4158 (LOC = 6197)
 - KLOC: 4.158
-- Defects found during project: 1 so far (D1), update when the group log is complete
-- Defect density: 0.24 defects per KLOC (1 / 4.158), provisional
+- Defects with recorded evidence: 2 (provisional; the full group defect log was not available)
+  - D8: insertion at position 0 drops the space after the inserted element in [1, 2] (Week 9 exploratory session)
+  - M1: _CustomDict.__or__ (tomlkit/_types.py, line 66) drops existing keys because copy() returns {} (mutation testing, mutant 7)
+- Defect density: 0.48 defects per KLOC (2 / 4.158), provisional
+- Environment note: the Week 9 session reports Python 3.14.7; Week 10 measurements used Python 3.12.10 with pytest 7.4.4
 
 ## Step 6: RTM completeness
 
