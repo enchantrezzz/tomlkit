@@ -38,11 +38,10 @@ Repository: the-dezeray/tomlkit (fork of python-poetry/tomlkit)
 | D1 | 26 Oct 2026 | _CustomDict.__or__ drops existing keys because copy() returns {} (tomlkit/_types.py, line 66) | Mutation testing (mutant 7) |
 
 ## Step 5: Defect density
-
-- Lines of code (SLOC, source only): TBD
-- KLOC: TBD
-- Defects found during project: TBD
-- Defect density: TBD (defects / KLOC)
+- Lines of code: radon raw -s tomlkit, total SLOC = 4158 (LOC = 6197)
+- KLOC: 4.158
+- Defects found during project: 1 so far (D1), update when the group log is complete
+- Defect density: 0.24 defects per KLOC (1 / 4.158), provisional
 
 ## Step 6: RTM completeness
 
