@@ -1,0 +1,10 @@
+module,mutants,killed_ai_only,killed_hybrid,score_ai_only,score_hybrid,change_pts
+items.py,2000,1083,1147,54.1,57.4,+3.2
+parser.py,1387,887,938,64.0,67.6,+3.7
+container.py,1261,595,676,47.2,53.6,+6.4
+_utils.py,218,207,208,95.0,95.4,+0.5
+exceptions.py,174,58,68,33.3,39.1,+5.7
+api.py,149,124,132,83.2,88.6,+5.4
+source.py,127,105,109,82.7,85.8,+3.1
+toml_file.py,73,53,58,72.6,79.5,+6.8
+TOTAL,5389,3112,3336,57.7,61.9,+4.2
