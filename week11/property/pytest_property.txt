@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-9.1.1, pluggy-1.7.0
+rootdir: /home/zombie/tomlkit-w11
+configfile: pyproject.toml
+plugins: cov-7.1.0, hypothesis-6.170.12, bdd-9.0.0, platformdirs-4.13.5
+collected 10 items
+
+tests_property/test_properties.py ..........                             [100%]
+
+============================== 10 passed in 6.94s ==============================

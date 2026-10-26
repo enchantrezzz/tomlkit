@@ -1,0 +1,6 @@
+=========================== short test summary info ============================
+FAILED tests_tdd/test_tdd_cycles.py::test_c1_date_rejects_datetime_strings[1979-05-27T07:32:00]
+FAILED tests_tdd/test_tdd_cycles.py::test_c1_date_rejects_datetime_strings[1979-05-27 07:32:00Z]
+FAILED tests_tdd/test_tdd_cycles.py::test_c1_date_rejects_datetime_strings[0001-10-30 00:00]
+FAILED tests_tdd/test_tdd_cycles.py::test_c1_date_rejects_datetime_strings[1979-05-27T07:32:00-08:00]
+4 failed, 1 passed in 0.20s
