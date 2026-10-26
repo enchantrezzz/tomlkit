@@ -41,18 +41,30 @@ Repository: the-dezeray/tomlkit (fork of python-poetry/tomlkit)
 
 - Lines of code: radon raw -s tomlkit, total SLOC = 4158 (LOC = 6197)
 - KLOC: 4.158
-- Defects with recorded evidence: 2 (provisional; the full group defect log was not available)
-  - D8: insertion at position 0 drops the space after the inserted element in [1, 2] (Week 9 exploratory session)
-  - M1: _CustomDict.__or__ (tomlkit/_types.py, line 66) drops existing keys because copy() returns {} (mutation testing, mutant 7)
-- Defect density: 0.48 defects per KLOC (2 / 4.158), provisional
-- Environment note: the Week 9 session reports Python 3.14.7; Week 10 measurements used Python 3.12.10 with pytest 7.4.4
+- Defects with recorded evidence: 8 (provisional; full group defect log not yet consolidated)
+  - D1: date() accepted datetime strings (fixed, commit a4f54db)
+  - D2: Bool.__eq__ returns NotImplemented for another Bool (open, xfail)
+  - D3: inline-table duplicate raises KeyAlreadyPresent, not ParseError (open, xfail)
+  - D5: key([]) serialises to an unparseable key (open, xfail; output is now empty string)
+  - D6: comment() writes unparseable TOML for a bare CR (fixed, commit c829a38)
+  - D7: bare CR in multiline strings (fixed, commit a38a3d8)
+  - D8: insertion at position 0 drops the space after the inserted element (Week 9 session; open)
+  - M1: _CustomDict.__or__ drops existing keys because copy() returns {} (open, xfail-noted; mutant 7 survives)
+- Defect density: 1.92 defects per KLOC (8 / 4.158), provisional
+- Environment note: Week 9 session used Python 3.14.7; Week 10 measurements used Python 3.12.10, pytest 7.4.4
 
 ## Step 6: RTM completeness
 
-- Total requirements: TBD
-- Requirements with at least one passing test: TBD
-- RTM completeness: TBD %
+- Total requirements: 16 (R01 to R16, week6/rtm/rtm_week6.csv)
+- Requirements verified by a test of the requirement itself: 14
+- RTM completeness: 88% (14 / 16 x 100)
+- Excluded: R15 (listed tests do not exercise the D5 case); R16 (untested)
+- Test run: poetry run pytest -q tests_ai -> 386 passed, 2 xfailed (D2, D3)
+- Partial requirements still counted as verified only where a listed test passes: R03, R04, R12, R13
 
-## Step 7: Property tests
+## Step 7: Property tests (Track D)
 
-- Functions covered by Hypothesis tests: TBD
+- File: tests/test_properties.py
+- Hypothesis properties: parse reads back any TOML integer; dumps(parse(s)) == s for integer documents
+- Result: 2 passed
+- Covered functions: parse, dumps

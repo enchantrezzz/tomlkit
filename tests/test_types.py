@@ -53,3 +53,14 @@ def test_wrap_method_rewraps_result():
 def test_wrap_method_preserves_not_implemented():
     """Mutant 10 (line 86). Technique: decision coverage on `if result is NotImplemented`."""
     assert _Wrapped(2).passthrough(3) is NotImplemented
+
+
+import pytest as _pytest
+from tomlkit import key as _key
+from tomlkit import parse as _parse
+
+
+@_pytest.mark.xfail(strict=True, reason="DEFECT D5: key([]) serialises to an empty, unparseable key")
+def test_empty_key_list_serialises_to_parseable_key():
+    """R15 (D5). Technique: boundary value analysis on the empty list."""
+    _parse(_key([]).as_string() + " = 1")
