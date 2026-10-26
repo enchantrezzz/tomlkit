@@ -32,6 +32,8 @@ mypy = "1.19.1"
 Sphinx = "^4.3.2"
 furo = "^2022.9.29"
 mutmut = "<3"
+hypothesis = "<6.130"
+radon = "^6.0.1"
 
 [tool.ruff.lint]
 extend-select = [
