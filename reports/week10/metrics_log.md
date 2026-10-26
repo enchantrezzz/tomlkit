@@ -33,7 +33,7 @@ Environment: Python 3.12.10, pytest 7.4.4, mutmut 2.5.1, hypothesis 6.129.5, rad
 - Mutation run 2 (after tests/test_types.py): 4 killed (mutants 6, 8, 9, 10), 6 survived (mutants 1-5 equivalent; mutant 7 is a test gap, defect M1)
 - Mutation score (brief formula): 40% (4 / 10 x 100)
 - Adjusted score (excluding 5 equivalent mutants 1-5): 80% (4 / 5 x 100)
-- Week 7 (v1) mutation score for comparison: [FILL IN from Week 7 report]
+- Week 7 (v1) mutation score for comparison: 62.0% (3087 killed / (3087 killed + 1890 survived) x 100; 26 timeout/suspicious excluded); modules: _utils, api, container, exceptions, items, parser, source, toml_file (no overlap with Week 10 scope, which is _types.py only); runner: [RUNNER]; not directly comparable to Week 10
 - Limitation: mutation testing covers one module; the library-level score is not yet measured
 
 ## Step 5: Defect density
