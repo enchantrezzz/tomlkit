@@ -1,0 +1,83 @@
+{
+ "TOTAL": {
+  "survived": 956,
+  "total": 5389,
+  "killed": 4136,
+  "timeout": 34,
+  "no_tests": 263,
+  "score": 77.4,
+  "covered_score": 81.3
+ },
+ "_utils": {
+  "total": 218,
+  "killed": 204,
+  "timeout": 5,
+  "survived": 9,
+  "no_tests": 0,
+  "score": 95.9,
+  "covered_score": 95.9
+ },
+ "api": {
+  "total": 149,
+  "killed": 132,
+  "timeout": 0,
+  "survived": 17,
+  "no_tests": 0,
+  "score": 88.6,
+  "covered_score": 88.6
+ },
+ "container": {
+  "total": 1261,
+  "killed": 951,
+  "timeout": 4,
+  "survived": 251,
+  "no_tests": 55,
+  "score": 75.7,
+  "covered_score": 79.2
+ },
+ "exceptions": {
+  "total": 174,
+  "killed": 76,
+  "timeout": 0,
+  "survived": 88,
+  "no_tests": 10,
+  "score": 43.7,
+  "covered_score": 46.3
+ },
+ "items": {
+  "total": 2000,
+  "killed": 1471,
+  "timeout": 0,
+  "survived": 331,
+  "no_tests": 198,
+  "score": 73.5,
+  "covered_score": 81.6
+ },
+ "parser": {
+  "total": 1387,
+  "killed": 1135,
+  "timeout": 22,
+  "survived": 230,
+  "no_tests": 0,
+  "score": 83.4,
+  "covered_score": 83.4
+ },
+ "source": {
+  "total": 127,
+  "killed": 108,
+  "timeout": 3,
+  "survived": 16,
+  "no_tests": 0,
+  "score": 87.4,
+  "covered_score": 87.4
+ },
+ "toml_file": {
+  "total": 73,
+  "killed": 59,
+  "timeout": 0,
+  "survived": 14,
+  "no_tests": 0,
+  "score": 80.8,
+  "covered_score": 80.8
+ }
+}

@@ -1,0 +1,167 @@
+===== tomlkit.parser.xǁParserǁ_parse_table__mutmut_10
+# tomlkit.parser.xǁParserǁ_parse_table__mutmut_10: survived
+--- tomlkit/parser.py
++++ tomlkit/parser.py
+@@ -13,7 +13,7 @@
+     self.inc()  # Skip opening bracket
+
+     if self.end():
+-        raise self.parse_error(UnexpectedEofError)
++        raise self.parse_error(None)
+
+     is_aot = False
+     if self._current == "[":
+
+===== tomlkit.items.xǁAoTǁinsert__mutmut_10
+# tomlkit.items.xǁAoTǁinsert__mutmut_10: survived
+--- tomlkit/items.py
++++ tomlkit/items.py
+@@ -3,7 +3,7 @@
+     if not isinstance(value, Table):
+         raise ValueError(f"Unsupported insert value type: {type(value)}")
+     length = len(self)
+-    if index < 0:
++    if index <= 0:
+         index += length
+     if index < 0:
+         index = 0
+
+===== tomlkit.container.xǁContainerǁappend__mutmut_109
+# tomlkit.container.xǁContainerǁappend__mutmut_109: survived
+--- tomlkit/container.py
++++ tomlkit/container.py
+@@ -98,7 +98,7 @@
+                             self._raw_append(key, item)
+
+                         if validate:
+-                            self._validate_out_of_order_table(key)
++                            self._validate_out_of_order_table(None)
+
+                         return self
+
+
+===== tomlkit.items.xǁInlineTableǁas_string__mutmut_102
+# tomlkit.items.xǁInlineTableǁas_string__mutmut_102: survived
+--- tomlkit/items.py
++++ tomlkit/items.py
+@@ -64,7 +64,7 @@
+             # not after any trailing comment/whitespace -- otherwise the
+             # comma is swallowed by a trailing comment (see #512).
+             buf = f"{buf[:last_value_end]},{buf[last_value_end:]}"
+-            needs_separator = False
++            needs_separator = None
+
+         v_trivia_trail = v.trivia.trail.replace("\n", "")
+         if k.is_dotted() and isinstance(v, Table):
+
+===== tomlkit.container.xǁContainerǁ_validate_table_candidate__mutmut_10
+# tomlkit.container.xǁContainerǁ_validate_table_candidate__mutmut_10: survived
+--- tomlkit/container.py
++++ tomlkit/container.py
+@@ -8,7 +8,7 @@
+             if isinstance(existing, (Table, AoT)) != isinstance(v, (Table, AoT)):
+                 raise KeyAlreadyPresent(k)
+             if k.is_dotted():
+-                raise TOMLKitError("Redefinition of an existing table")
++                raise TOMLKitError("redefinition of an existing table")
+             if isinstance(existing, Table) and isinstance(v, Table):
+                 if not existing.is_super_table() and not v.is_super_table():
+                     # Both sides are concrete `[table]` definitions of the
+
+===== tomlkit.items.xǁArrayǁ__delitem____mutmut_101
+# tomlkit.items.xǁArrayǁ__delitem____mutmut_101: survived
+--- tomlkit/items.py
++++ tomlkit/items.py
+@@ -51,7 +51,7 @@
+                 for j in range(idx, len(self._value)):
+                     group = self._value[j]
+                     if group.indent is not None and "," in group.indent.s:
+-                        group.indent._s = group.indent.s.replace(",", "", 1)
++                        group.indent._s = group.indent.s.replace(",", "", )
+                         break
+             if group_rm.indent is not None and "\n" in group_rm.indent.s:
+                 # Restore the removed group's newline onto the next group
+
+===== tomlkit.container.xǁContainerǁ_replace_at__mutmut_10
+# tomlkit.container.xǁContainerǁ_replace_at__mutmut_10: survived
+--- tomlkit/container.py
++++ tomlkit/container.py
+@@ -18,7 +18,7 @@
+     # keeping the dotted key duplicates the prefix onto the header (#524) and
+     # lets the header swallow following dotted siblings (#542). Drop the dotted
+     # key so the replacement renders as a plain table/array of tables.
+-    dotted_to_header = k.is_dotted() and (
++    dotted_to_header = k.is_dotted() or (
+         isinstance(value, AoT)
+         or (isinstance(value, Table) and not value.is_super_table())
+     )
+
+===== tomlkit.items.xǁArrayǁadd_line__mutmut_11
+# tomlkit.items.xǁArrayǁadd_line__mutmut_11: survived
+--- tomlkit/items.py
++++ tomlkit/items.py
+@@ -23,7 +23,7 @@
+         ]
+         """
+     if comment and ("\n" in comment or "\r" in comment):
+-        raise ValueError("Comment cannot contain line breaks")
++        raise ValueError("XXComment cannot contain line breaksXX")
+     new_values: list[Item] = []
+     first_indent = f"\n{indent}" if newline else indent
+     if first_indent:
+
+===== tomlkit.parser.xǁParserǁ_parse_string__mutmut_103
+# tomlkit.parser.xǁParserǁ_parse_string__mutmut_103: survived
+--- tomlkit/parser.py
++++ tomlkit/parser.py
+@@ -76,7 +76,7 @@
+             # try to process current as a closing delim
+             original = self.extract()
+
+-            close = ""
++            close = None
+             if delim.is_multiline():
+                 # Consume the delimiters to see if we are at the end of the string
+                 close = ""
+
+===== tomlkit.container.xǁContainerǁ_render_table__mutmut_26
+# tomlkit.container.xǁContainerǁ_render_table__mutmut_26: survived
+--- tomlkit/container.py
++++ tomlkit/container.py
+@@ -29,7 +29,7 @@
+     ):
+         open_, close = "[", "]"
+         if table.is_aot_element():
+-            open_, close = "[[", "]]"
++            open_, close = None
+
+         newline_in_table_trivia = (
+             "\n" if "\n" not in table.trivia.trail and len(table.value) > 0 else ""
+
+===== tomlkit.parser.xǁParserǁ_parse_comment_trail__mutmut_29
+# tomlkit.parser.xǁParserǁ_parse_comment_trail__mutmut_29: survived
+--- tomlkit/parser.py
++++ tomlkit/parser.py
+@@ -26,7 +26,7 @@
+             while not self.end() and self._current not in _NL:
+                 code = ord(self._current)
+                 if code == CHR_DEL or (code <= CTRL_CHAR_LIMIT and code != CTRL_I):
+-                    raise self.parse_error(InvalidControlChar, code, "comments")
++                    raise self.parse_error(InvalidControlChar, code, None)
+
+                 if not self.inc():
+                     break
+
+===== tomlkit.exceptions.xǁInvalidControlCharǁ__init____mutmut_11
+# tomlkit.exceptions.xǁInvalidControlCharǁ__init____mutmut_11: survived
+--- tomlkit/exceptions.py
++++ tomlkit/exceptions.py
+@@ -4,7 +4,7 @@
+     if char < 16:
+         display_code += "0"
+
+-    display_code += hex(char)[2:]
++    display_code += hex(char)[3:]
+
+     message = (
+         "Control characters (codes less than 0x1f and 0x7f)"
