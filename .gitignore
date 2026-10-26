@@ -36,3 +36,4 @@ benchmark.py
 # mutmut working directory
 mutants/
 .mutmut-cache
+.hypothesis/

@@ -25,12 +25,17 @@ Repository: the-dezeray/tomlkit (fork of python-poetry/tomlkit)
 
 ## Step 4: Mutation testing
 
-- Scope: TBD
-- Killed: TBD
-- Survived: TBD
-- Total: TBD
-- Mutation score: TBD (killed / (killed + survived) x 100)
-- Week 7 (v1) mutation score for comparison: TBD
+- Scope: tomlkit/_types.py (4 of 6 planned modules so far; see note)
+- Runner: python -m pytest -x --assert=plain tests (tests/ only, 1058 tests)
+- Killed: 4 (mutants 6, 8, 9, 10)
+- Survived: 6 (mutants 1-5 equivalent; mutant 7 is a test gap, see defect D1)
+- Total: 10
+- Mutation score (brief formula): 40% (4 / 10 x 100)
+- Adjusted score (excluding 5 equivalent mutants): 80% (4 / 5 x 100)
+- Week 7 (v1) mutation score for comparison: [FILL IN from Week 7 report]
+- Note: items.py, container.py, api.py and parser.py are not yet mutated.
+
+| D1 | 26 Oct 2026 | _CustomDict.__or__ drops existing keys because copy() returns {} (tomlkit/_types.py, line 66) | Mutation testing (mutant 7) |
 
 ## Step 5: Defect density
 
