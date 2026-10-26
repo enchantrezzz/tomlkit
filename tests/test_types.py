@@ -1,10 +1,13 @@
-"""Tests for tomlkit/_types.py, targeting mutants 6, 7, 9 and 10 from the Week 10 mutation run.
+"""Tests for tomlkit/_types.py, targeting mutants 6, 7, 9 and 10 from the Week 10 mutation run,
+plus an xfail record for defect D5 (R15).
 
-Techniques: normal-case functional testing (mutants 6, 7, 9) and
-decision coverage on the `if result is NotImplemented` branch (mutant 10).
+Techniques: normal-case functional testing (mutants 6, 7, 9), decision coverage on the
+`if result is NotImplemented` branch (mutant 10), boundary value analysis on the empty key list (D5).
 """
 import pytest
 
+from tomlkit import key
+from tomlkit import parse
 from tomlkit._types import _CustomDict
 from tomlkit._types import _CustomList
 from tomlkit._types import wrap_method
@@ -18,8 +21,7 @@ def test_list_add_returns_combined_list():
 
 @pytest.mark.xfail(
     strict=True,
-    reason="DEFECT found by mutation testing: _CustomDict.__or__ starts from "
-           "copy(), which returns {}, so existing keys are dropped.",
+    reason="DEFECT M1: _CustomDict.__or__ starts from copy(), which returns {}, so existing keys are dropped.",
 )
 def test_dict_or_returns_merged_dict():
     """Mutant 7 (line 66). Technique: normal-case functional testing."""
@@ -55,12 +57,10 @@ def test_wrap_method_preserves_not_implemented():
     assert _Wrapped(2).passthrough(3) is NotImplemented
 
 
-import pytest as _pytest
-from tomlkit import key as _key
-from tomlkit import parse as _parse
-
-
-@_pytest.mark.xfail(strict=True, reason="DEFECT D5: key([]) serialises to an empty, unparseable key")
+@pytest.mark.xfail(
+    strict=True,
+    reason="DEFECT D5: key([]) serialises to an empty, unparseable key (EmptyKeyError on parse).",
+)
 def test_empty_key_list_serialises_to_parseable_key():
     """R15 (D5). Technique: boundary value analysis on the empty list."""
-    _parse(_key([]).as_string() + " = 1")
+    parse(key([]).as_string() + " = 1")
