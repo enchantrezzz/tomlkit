@@ -1,29 +1,29 @@
 order,tests_run,pct_mutants_detected
-Risk-based,1,14.7
-Risk-based,5,25.6
-Risk-based,10,43.0
-Risk-based,20,54.7
-Risk-based,30,65.9
-Risk-based,40,70.5
-Risk-based,50,72.1
-Risk-based,75,82.2
-Risk-based,100,89.5
-Risk-based,150,100.0
-Risk-based,200,100.0
-Risk-based,250,100.0
-Risk-based,300,100.0
-Risk-based,149,100.0
-Default order,1,14.7
-Default order,5,17.8
-Default order,10,27.5
-Default order,20,31.0
-Default order,30,40.7
-Default order,40,45.3
-Default order,50,49.2
-Default order,75,67.1
-Default order,100,82.9
-Default order,150,100.0
-Default order,200,100.0
-Default order,250,100.0
-Default order,300,100.0
-Default order,149,100.0
+Risk-based,1,20.5
+Risk-based,5,34.4
+Risk-based,10,46.2
+Risk-based,20,57.9
+Risk-based,30,61.2
+Risk-based,40,64.1
+Risk-based,50,71.1
+Risk-based,75,75.5
+Risk-based,100,76.6
+Risk-based,150,82.8
+Risk-based,200,87.9
+Risk-based,250,90.1
+Risk-based,300,96.7
+Risk-based,387,100.0
+Default order,1,13.9
+Default order,5,17.2
+Default order,10,22.7
+Default order,20,27.1
+Default order,30,28.2
+Default order,40,29.7
+Default order,50,33.3
+Default order,75,41.8
+Default order,100,49.8
+Default order,150,58.6
+Default order,200,79.1
+Default order,250,85.7
+Default order,300,91.9
+Default order,387,100.0

@@ -65,18 +65,24 @@ and rank 4 exercises `InlineTable.as_string` (30). This puts high-risk
 container and formatting behavior early without tuning the ranking to the
 sampled mutants.
 
-The 300-mutant kill-matrix sample had one mutant that did not remain killed in
-the fresh v1 run; it was excluded. Of the remaining sample, 258 mutants had
-matching test identifiers for APFD. The risk-based order achieved APFD
-**0.7722**, compared with **0.6369** for collection order and **0.6911** for
-the mean of 200 shuffled orders. It detected half of those mutants within 16
-tests, versus 51 in collection order. The full ranking and evaluation are in
-`priority_order.csv` and `prioritisation_eval.json`.
+The kill matrix samples 300 killed mutants (seed 441); 273 of them map to
+failing AI tests and are used for APFD. The risk-based order achieved APFD
+**0.838**, compared with **0.689** for pytest collection order and **0.748**
+for the mean of 200 shuffled orders (range 0.692–0.805), so it beat every
+random order. It detected half of those mutants within 12 tests, versus 103 in
+collection order, and 90% within 245 versus 284. These are the figures in the
+Week 7 Mutation Testing Report v1 and the final report. The full ranking and
+evaluation are in `priority_order.csv` and `prioritisation_eval.json`.
+
+Note: the PR #2 re-run replaced these files with a 149-test mapping (APFD
+0.772). The original Week 7 prioritisation files (PR #1) are restored here so
+the repository matches the reports; the PR #2 mutation results and survivor
+categories are unchanged.
 
 ## Files
 - `mutmut_results_v1.txt`, `mutation_v1_summary.json` - every mutant's status; score per module
 - `survivor_categories_v1.csv` - all 1,890 survivors with diff and heuristic category
-- `kill_matrix.json` - which AI tests fail for a seeded sample of 300 mutants; one stale mutant is excluded from APFD
+- `kill_matrix.json` - which AI tests fail for 300 randomly sampled killed mutants (seed 441)
 - `priority_order.csv` - ranked execution order for the suite
 - `prioritisation_eval.json`, `detection_curve.csv` - APFD of risk-based vs pytest order vs random
 - `churn_2y.tsv` - lines changed per file since 2024-10-18 (git log --numstat)

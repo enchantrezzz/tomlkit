@@ -3602,7 +3602,15 @@
   "tests_ai/test_ai_parser.py::TestDates::test_offset_datetime_negative",
   "tests_ai/test_ai_parser.py::TestDates::test_local_datetime"
  ],
- "tomlkit.items.x\u01c1String\u01c1from_raw__mutmut_33": [],
+ "tomlkit.items.x\u01c1String\u01c1from_raw__mutmut_33": [
+  "tests_ai/test_ai_api.py::TestDumps::test_dumps_plain_dict",
+  "tests_ai/test_ai_api.py::TestDocument::test_document_build",
+  "tests_ai/test_ai_container.py::TestEditingPreservesStyle::test_update_value_keeps_comment",
+  "tests_ai/test_ai_container.py::TestEditingPreservesStyle::test_add_key_to_existing_table",
+  "tests_ai/test_ai_container.py::TestEditingPreservesStyle::test_replace_preserves_position",
+  "tests_ai/test_ai_container.py::TestUnwrapCopySetdefault::test_deepcopy",
+  "tests_ai/test_ai_items.py::TestInlineTable::test_render"
+ ],
  "tomlkit.container.x\u01c1Container\u01c1append__mutmut_11": [
   "tests_ai/test_ai_api.py::TestParseAndLoads::test_parse_returns_document",
   "tests_ai/test_ai_api.py::TestParseAndLoads::test_parse_values",
